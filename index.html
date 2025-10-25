@@ -127,7 +127,7 @@
     <!-- banner -->
     <div class="banner-container bg-image-cover" style="background: #070910">
       <div
-        class="container position-relative h-100 banner-left"
+        class="container position-relative h-100 banner-left animate-fade-in"
         style="max-width: 100%; padding-right: 0"
       >
         <div class="banner-content h-100 container">
@@ -141,7 +141,7 @@
                   <h1
                     class="shoushu display6-size ls-n8 lh-5 text-white mb-4 banner-h1"
                   >
-                    <span> 黄金锚。 </span>
+                    <span> 黄金锚</span>
                   </h1>
                   <p class="fs-18 lh-28 text-white-50 mb-4">
                     HMC作为中马晟蓝海马产业RWA项目的核心代币，是基于海马实体资产发行的数字权益凭证，旨在通过区块链技术将传统海马产业的实体资产价值与数字经济生态深度融合。
@@ -194,7 +194,7 @@
       <div class="container py-lg-5 position-relative">
         <div class="row gy-4 gx-4 exchange-content">
           <div class="col-lg-6 position-relative z-2 mt-0 pl-20">
-            <div class="group-box">
+            <div class="group-box scroll-animate" style="transform: translateY(50px);">
               <div class="group-text">
                 <img src="imgs/Group 2085664819.png" />
                 <label class="text-blue fs-16">代币名称：</label>
@@ -257,7 +257,7 @@
             </h2> -->
           </div>
           <div class="col-lg-6 position-relative z-2 mt-0">
-            <div class="py-4 text-center rounded-3 text-white exchange-right">
+            <div class="py-4 text-center rounded-3 text-white exchange-right scroll-animate animate-glow" style="transform: translateY(50px);">
               <div class="d-flex flex-row justify-content-between px-4">
                 <p class="mb-0 text-blue fs-14 lh-24" id="equity-num">
                   私募数量: 0.00 HMC
@@ -396,11 +396,12 @@
         <div class="container" style="max-width: 100%; padding-right: 10%; ">
           <div class="row justify-content-between">
             <div
-              class="col-lg-5 col-md-6 d-flex h-100 align-items-center my-auto"
+              class="col-lg-5 col-md-6 d-flex h-100 align-items-center my-auto scroll-animate"
+              style="transform: translateX(-50px);"
             >
               <img src="imgs/seahorse2.png" alt="about" class="about-image" />
             </div>
-            <div class="col-lg-6 col-md-6 pe-lg-5 py-5">
+            <div class="col-lg-6 col-md-6 pe-lg-5 py-5 scroll-animate" style="transform: translateX(50px);">
               <h2
                 class="display4-size ls-n5 theme-text-stork text-white mb-4 lh-5"
               >
@@ -461,7 +462,7 @@
         </div> -->
 
         <div class="col-lg-4 clear-width">
-          <div class="bg-border">
+          <div class="bg-border scroll-animate delay-1" style="transform: translateY(50px);">
             <div
               class="howtobuy p-4 pt-5 text-white text-center position-relative"
             >
@@ -478,7 +479,7 @@
           </div>
         </div>
         <div class="col-lg-4 clear-width">
-          <div class="bg-border">
+          <div class="bg-border scroll-animate delay-2" style="transform: translateY(50px);">
             <div
               class="howtobuy p-4 pt-5 text-white text-center position-relative"
             >
@@ -495,7 +496,8 @@
         </div>
         <div class="col-lg-4 clear-width">
           <div
-            class="howtobuy last p-4 pt-5 text-white text-center position-relative"
+            class="howtobuy last p-4 pt-5 text-white text-center position-relative scroll-animate delay-3"
+            style="transform: translateY(50px);"
           >
             <span
               class="rounded-pill w-6 h-6 position-absolute top-0 start-50 translate-middle display1-size bg-blue text-white d-flex align-items-center text-center justify-content-center step-number"
@@ -517,7 +519,8 @@
           <div class="row justify-content-center">
             <div class="col-sm-12">
               <div
-                class="d-flex flex-column justify-content-center text-center title"
+                class="d-flex flex-column justify-content-center text-center title scroll-animate"
+                style="transform: translateY(30px);"
               >
                 <h2
                   class="display4-size ls-n5 theme-text-stork text-white lh-5"
@@ -568,8 +571,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 px-0 mt-5">
-              <canvas id="myPieChart"></canvas>
+            <div class="col-sm-6 px-0 ">
+              <canvas id="myPieChart" ></canvas>
             </div>
             <div
               class="col-sm-3 tokenomics-number d-none d-md-block d-lg-block d-xl-block d-xxl-block"
@@ -713,7 +716,8 @@
         <div class="row justify-content-center">
           <div class="col-sm-12">
             <div
-              class="d-flex flex-column justify-content-center text-center title"
+              class="d-flex flex-column justify-content-center text-center title scroll-animate"
+              style="transform: translateY(30px);"
             >
               <h2 class="display4-size ls-n5 theme-text-stork text-white lh-5">
                 Got Questions?
@@ -1471,6 +1475,22 @@
             display: false,
           },
         },
+        plugins: [{
+          id: 'centerCircle',
+          afterDraw: (chart) => {
+            const {ctx, chartArea: {left, top, width, height}} = chart;
+            const centerX = left + width / 2;
+            const centerY = top + height / 2;
+            const radius = Math.min(width, height) / 10; // 调整这个值来改变中心圆的大小
+
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+            ctx.fillStyle = '#D9D9D9'; // 纯色圆的颜色，与背景色一致
+            ctx.fill();
+            ctx.restore();
+          }
+        }]
       };
 
       // Create and render the chart
@@ -1491,7 +1511,7 @@
           bind: "绑定",
           bound: "已绑定",
           bannerTitle1: "数字海洋的",
-          bannerTitle2: "黄金锚。",
+          bannerTitle2: "黄金锚",
           bannerDesc:
             "HMC作为中马晟蓝海马产业RWA项目的核心代币，是基于海马实体资产发行的数字权益凭证，旨在通过区块链技术将传统海马产业的实体资产价值与数字经济生态深度融合。",
           exchange: {
@@ -1781,6 +1801,49 @@
 
       document.addEventListener("DOMContentLoaded", () => {
         applyLanguage(currentLang);
+      });
+    </script>
+    <script>
+      // 滚动触发动画
+      function initScrollAnimations() {
+        const scrollElements = document.querySelectorAll('.scroll-animate');
+
+        const elementInView = (el, offset = 100) => {
+          const elementTop = el.getBoundingClientRect().top;
+          return elementTop <= (window.innerHeight || document.documentElement.clientHeight) - offset;
+        };
+
+        const displayScrollElement = (element) => {
+          element.classList.add('active');
+        };
+
+        const handleScrollAnimation = () => {
+          scrollElements.forEach((el) => {
+            if (elementInView(el)) {
+              displayScrollElement(el);
+            }
+          });
+        };
+
+        window.addEventListener('scroll', handleScrollAnimation);
+        handleScrollAnimation(); // 初始检查
+      }
+
+      // 页面加载完成后初始化动画
+      window.addEventListener('load', () => {
+        initScrollAnimations();
+
+        // 为主要元素添加浮动动画
+        const floatElements = document.querySelectorAll('.seahorse1, .earth, .seahorse3');
+        floatElements.forEach(el => {
+          el.classList.add('animate-float');
+        });
+
+        // 为装饰图标添加慢速旋转
+        const icoImages = document.querySelectorAll('.about-wrap img[src*="ico.png"]');
+        icoImages.forEach(el => {
+          el.classList.add('animate-rotate');
+        });
       });
     </script>
     <script>
