@@ -519,11 +519,11 @@
           <div class="row justify-content-center">
             <div class="col-sm-12">
               <div
-                class="d-flex flex-column justify-content-center text-center title scroll-animate"
+                class="d-flex flex-column justify-content-center text-center scroll-animate"
                 style="transform: translateY(30px);"
               >
                 <h2
-                  class="display4-size ls-n5  text-white lh-5"
+                  class="display4-size ls-n5  text-white lh-5 title"
                 >
                   代币经济学
                 </h2>
@@ -694,7 +694,7 @@
                 <h2
                   class="display4-size ls-n5  text-white lh-5 roadmap-title"
                 >
-                  Roadmap
+                  画廊
                 </h2>
               </div>
             </div>
@@ -1763,7 +1763,10 @@
           howStepTexts[1].innerText = t.howStep2Text;
           howStepTexts[2].innerText = t.howStep3Text;
         }
-
+        const tokenomicsTitle = document.querySelector("#Tokenomics h2.title");
+        if (tokenomicsTitle) tokenomicsTitle.innerText = t.tokenomicsTitle;
+        const toadmapTitle = document.querySelector("#Roadmap h2.roadmap-title");
+        if (toadmapTitle) toadmapTitle.innerText = t.roadmapTitle;
         // FAQ
         const faqTitle = document.querySelector("#Faq h2");
         const faqSub = document.querySelector("#Faq h3");
