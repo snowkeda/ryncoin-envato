@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <title>Ryncoin - HTML MEME coin Template</title>
+    <meta name="description" content="Bootstrap 5 Based HTML Template">
+    <meta name="keywords" content="bootstrap 5, pwa, mobile template, cordova, phonegap, mobile, html">
+    <link rel="icon" type="image/ico" href="assets/images/favicon.ico" sizes="48x48">
+    
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="assets/images/icons/72x72.png">
+    <link rel="apple-touch-icon" href="assets/images/icons/96x96.png">
+    <link rel="apple-touch-icon" href="assets/images/icons/128x128.png">
+    <link rel="apple-touch-icon" href="assets/images/icons/144x144.png">
+    <link rel="apple-touch-icon" href="assets/images/icons/152x152.png">
+    <link rel="apple-touch-icon" href="assets/images/icons/196x196.png">
+    <link rel="apple-touch-icon" href="assets/images/icons/512x512.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#db4938">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="circle one"></div>
+            <div class="circle two"></div>
+            <div class="circle three"></div>
+        </div>
+    </div>
+    <div class="main-content position-relative overflow-hidden">
+        <!-- header -->
+        <header class="header-container style2 bg-black nav-down">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light border-0">
+                    <a class="navbar-brand light-logo" href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+                    <button class="navbar-toggler px-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0" id="navbar-main">
+                            <li class="nav-item menu-item-has-children">
+                                <a class="nav-link text-white mega-menu" href="#">Home</a>
+                                <ul class="sub-menu">
+                                <li class="menu-item"><a href="home-1.html">Home 1</a></li>
+                                <li class="menu-item"><a href="home-2.html">Home 2</a></li>
+                                <li class="menu-item"><a href="home-3.html">Home 3</a></li>
+                                <li class="menu-item"><a href="home-4.html">Home 4</a></li>
+                            </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link text-white" href="home-1.html#About">About</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="home-1.html#HowToBuy">How To Buy</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="home-1.html#Tokenomics">Tokenomics</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="home-1.html#Roadmap">Roadmap</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="home-1.html#Faq">Faq</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <a href="#Exchange" class="btn bg-theme-pink border border-black text-black d-none d-lg-flex px-4">Exchange</a>
+                </nav>
+            </div>
+        </header>
+        <!-- header -->
+        <!-- banner -->
+        <div class="banner-container-two bg-theme-cyan pb-5">
+            <div class="container position-relative h-100 pb-lg-4">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="d-flex flex-column justify-content-center text-center pb-5">
+                            <h2 class="display4-size ls-n5 theme-text-stork text-white lh-5">Stacking</h2>
+                            <h3 class="display1-size mb-3 mt-0 text-black lh-1"> Why this coin rule them all</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                	<div class="col-lg-10">
+                		<div class="p-4 text-center shadow border border-black bg-white rounded-3 text-black">
+                			<span class="text-black display1-size">Token Supply</span>
+                			<div class="position-relative mt-3" style="height:350px;">
+                				<canvas id="supplyChart"></canvas>
+                			</div>
+                		</div>
+                	</div>
+                	<div class="col-lg-10 mt-5">
+                		<div class="p-4 text-center shadow border border-black bg-white rounded-3 text-black">
+                			<span class="text-black display1-size">Market Analytics</span>
+	                		<div class="table-responsive scrollbar mt-4">
+	                            <table class="table table-hover table-head-light mb-0">
+	                                <thead>
+	                                    <tr>
+	                                        <th class="dark-bg1 rounded-start"><input class="form-check-input position-relative" type="checkbox" aria-label="check"></th>
+	                                        <th style="width: 35px;">#</th>
+	                                        <th>Name</th>
+	                                        <th>Price</th>
+	                                        <th>1h %</th>
+	                                        <th>24h %</th>
+	                                        <th>7d %</th>
+	                                        <th>Market Cap</th>
+	                                        <th></th>
+	                                    </tr>
+	                                </thead>
+	                                <tbody>
+	                                    <tr>
+	                                        <td><input class="form-check-input position-relative" type="checkbox" aria-label="check"></td>
+	                                        <td><img src="https://placehold.co/40x40/ddd/31343C" alt="crypto" width="35" height="35"></td>
+	                                        <td class="fw-500 text-start">Bitcoin <span class="fs-13 d-block text-gray-500 lh-1"> BTC</span></td>
+	                                        <td>$97,867.97</td>
+	                                        <td class="text-success">+0.41%</td>
+	                                        <td class="text-success">+0.05%</td>
+	                                        <td class="text-success">+3.58%</td>
+	                                        <td>$1,938,381,452,471</td>
+	                                        <td class="text-end"><a href="#" class="btn bg-theme-cyan border border-black shadow text-black w-100">Trade</a></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td><input class="form-check-input position-relative" type="checkbox" aria-label="check"></td>
+	                                        <td><img src="https://placehold.co/40x40/ddd/31343C" alt="crypto" width="35" height="35"></td>
+	                                        <td class="fw-500 text-start">Ethereum <span class="fs-13 d-block text-gray-500 lh-1"> ETH</span></td>
+	                                        <td>$3,623.79</td>
+	                                        <td class="text-success">+0.53%</td>
+	                                        <td class="text-danger fw-500">-0.15%</td>
+	                                        <td class="text-success">+7.59%</td>
+	                                        <td>$436,572,877,495</td>
+	                                        <td class="text-end"><a href="#" class="btn bg-theme-cyan border border-black shadow text-black w-100">Trade</a></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td><input class="form-check-input position-relative" type="checkbox" aria-label="check"></td>
+	                                        <td><img src="https://placehold.co/40x40/ddd/31343C" alt="crypto" width="35" height="35"></td>
+	                                        <td class="fw-500 text-start">Tether <span class="fs-13 d-block text-gray-500 lh-1"> USDT</span></td>
+	                                        <td>$0.9998</td>
+	                                        <td class="text-danger fw-500">0.00%</td>
+	                                        <td class="text-danger fw-500">-0.01%</td>
+	                                        <td class="text-success">+0.15%</td>
+	                                        <td>$137,240,297,620</td>
+	                                        <td class="text-end"><a href="#" class="btn bg-theme-cyan border border-black shadow text-black w-100">Trade</a></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td><input class="form-check-input position-relative" type="checkbox" aria-label="check"></td>
+	                                        <td><img src="https://placehold.co/40x40/ddd/31343C" alt="crypto" width="35" height="35"></td>
+	                                        <td class="fw-500 text-start">XRP <span class="fs-13 d-block text-gray-500 lh-1"> XRP</span></td>
+	                                        <td>$2.37</td>
+	                                        <td class="text-success">+0.34%</td>
+	                                        <td class="text-danger fw-500">-3.39%</td>
+	                                        <td class="text-success">+9.53%</td>
+	                                        <td>$135,849,609,791</td>
+	                                        <td class="text-end"><a href="#" class="btn bg-theme-cyan border border-black shadow text-black w-100">Trade</a></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td><input class="form-check-input position-relative" type="checkbox" aria-label="check"></td>
+	                                        <td><img src="https://placehold.co/40x40/ddd/31343C" alt="crypto" width="35" height="35"></td>
+	                                        <td class="fw-500 text-start">Solana <span class="fs-13 d-block text-gray-500 lh-1"> SOL</span></td>
+	                                        <td>$212.93</td>
+	                                        <td class="text-success">+0.41%</td>
+	                                        <td class="text-danger fw-500">-1.16%</td>
+	                                        <td class="text-success">+9.65%</td>
+	                                        <td>$102,845,407,187</td>
+	                                        <td class="text-end"><a href="#" class="btn bg-theme-cyan border border-black shadow text-black w-100">Trade</a></td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td><input class="form-check-input position-relative" type="checkbox" aria-label="check"></td>
+	                                        <td><img src="https://placehold.co/40x40/ddd/31343C" alt="crypto" width="35" height="35"></td>
+	                                        <td class="fw-500 text-start">BNB <span class="fs-13 d-block text-gray-500 lh-1"> BNB</span></td>
+	                                        <td>$707.43</td>
+	                                        <td class="text-success">+0.38%</td>
+	                                        <td class="text-danger fw-500">-0.93%</td>
+	                                        <td class="text-danger fw-500">-0.48%</td>
+	                                        <td>$101,875,395,547</td>
+	                                        <td class="text-end"><a href="#" class="btn bg-theme-cyan border border-black shadow text-black w-100">Trade</a></td>
+	                                    </tr>
+	                                    
+	                                </tbody>
+	                            </table>                                        
+	                        </div>
+                        </div>
+                	</div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- banner -->
+        <!-- footer -->
+        <div class="footer">
+            <div class="footer-wrap pt-5 bg-black">
+                <div class="container pt-lg-5 pb-lg-4 my-3">
+                    <div class="row gy-4 gx-4 justify-content-center">
+                        <div class="text-center"><img src="assets/images/logo.png" alt="logo"></div>
+                        <div class="col-md-6">
+                            <p class="fs-18 lh-28 text-white text-center mb-4">Ryncoin is a revolutionary meme-powered cryptocurrency combining humor, community, and real utility with a fair launch!</p>
+                        </div>
+                        <ul class="navbar-nav d-flex flex-row gap-3 justify-content-center mt-2 mb-3">
+                            <li><a href="#" aria-label="mastodon" data-bs-toggle="tooltip" data-bs-placement="botton" data-bs-title="Mastodon"><i class="bi-mastodon text-white display1-size"></i></a></li>
+                            <li><a href="#" aria-label="telegram"><i class="bi-telegram text-white display1-size"></i></a></li>
+                            <li><a href="#" aria-label="twitter"><i class="bi-twitter-x text-white display1-size"></i></a></li>
+                            <li><a href="#" aria-label="instagram"><i class="bi-instagram text-white display1-size"></i></a></li>
+                            <li><a href="#" aria-label="twitch"><i class="bi-twitch text-white display1-size"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright text-center py-3 border-gray-800 border-top">
+                    <p class="fs-18 lh-28 text-white text-center mb-0 text-uppercase py-2">Copyright@2025 by uitheme.shop All right reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+    	const ctx = document.getElementById('supplyChart').getContext('2d');
+
+    	var background_1 = ctx.createLinearGradient(0, 0, 0, 200);
+        background_1.addColorStop(0, '#0dcaf0');
+        background_1.addColorStop(.7, '#0dcaf0');
+        background_1.addColorStop(1, '#FF99E9');
+
+		const supplyData = {
+		    labels: [ // Months as labels
+		        "DEC-2024", "JAN-2025", "FEB-2025", "MAR-2025", "APR-2025", "MAY-2025", "JUN-2025", 
+		        "JUL-2025", "AUG-2025", "SEP-2025", "OCT-2025", "NOV-2025", "DEC-2025", "JAN-2026", 
+		        "FEB-2026", "MAR-2026", "APR-2026", "MAY-2026", "JUN-2026", "JUL-2026", "AUG-2026", 
+		        "SEP-2026", "OCT-2026", "NOV-2026", "DEC-2026", "JAN-2027", "FEB-2027", "MAR-2027", 
+		        "APR-2027", "MAY-2027", "JUN-2027", "JUL-2027", "AUG-2027", "SEP-2027", "OCT-2027", 
+		        "NOV-2027"
+		    ],
+		    datasets: [{
+		        label: 'Supply',
+		        data: [10, 20, 15, 20, 15, 15, 13, 15, 10, 20, 15, 20, 15, 30, 20, 15, 20, 15, 15, 20, 15, 30, 20, 15,30, 20, 15, 20, 15, 15, 20, 15, 30, 20, 15],
+		        // borderColor: 'rgba(51, 153, 255, 1)', // Blue line
+		        backgroundColor: background_1, // Blue fill with opacity
+		        borderRadius: 7,
+                borderSkipped: false,
+		    }]
+		};
+
+		const supplyChart = new Chart(ctx, {
+		    type: 'bar',
+		    data: supplyData,
+		    options: {
+		        responsive: true, // Make chart responsive
+		        maintainAspectRatio: false, // Allow for custom aspect ratio
+		        scales: {
+		            x: {
+		                grid: {
+		                    color: 'rgba(255, 255, 255, 0.1)', // Subtle white gridlines
+		                    lineWidth: 0.5 // Thin gridlines
+		                },
+		                ticks: {
+		                    color: '#111', // White x-axis labels
+		                    font: {
+                                size: 14,
+                                weight: 500,
+                                family: "'ConcertOne'"
+                            }
+		                }
+		            },
+		            y: {
+		                beginAtZero: true, // Start y-axis at a relevant value (not necessarily 0)
+		                // max: 120, // Set your maximum y-axis value
+		                grid: {
+		                    color: 'rgba(255, 255, 255, 0.1)', // Subtle white gridlines
+		                    lineWidth: 0.5 // Thin gridlines
+		                },
+		                ticks: {
+		                    color: '#111', // White y-axis labels
+		                    font: {
+                                size: 14,
+                                weight: 500,
+                                family: "'ConcertOne'"
+                            }
+		                }
+		            }
+		        },
+		        plugins: {
+		            legend: {
+                        display: false,
+                    },
+		        },
+		        // Styling to mimic the image
+		        backgroundColor: '#111', // Dark background
+		        color: 'white' // Default text color
+		    }
+		});
+    </script>
+    
+</body>
+</html>

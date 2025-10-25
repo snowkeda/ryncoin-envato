@@ -1,0 +1,204 @@
+.row{
+	margin-right: 0;
+	margin-left: 0;
+}
+.how-to-container{
+	width: 100vw;
+	margin-right: 0;
+	margin-left: 0;
+}
+.howtobuy{
+	border-radius: 16px;
+	position: relative;
+	/* background: linear-gradient(180deg, rgba(7, 9, 16, 0.00) 0%, #0C132C 100%); */
+	background: linear-gradient(180deg, #07091000 0%, #070910 100%);
+}
+.howtobuy.last {
+	border-radius: 16px;
+	background: linear-gradient(180deg, rgba(7, 9, 16, 0.00) 0%, #0C132C 100%);
+}
+.bg-border{
+	background: linear-gradient(180deg, #1358FD00 0%, #0B3597 100%);
+	width: 100%;
+	height: 100%;
+	border-radius: 16px;
+	padding: 1px;
+}
+
+/* How to Buy 进度连接线 */
+.progress-line {
+	position: absolute;
+	top: 0;
+	width: calc(100vw - 96px);
+	height: 10px;
+	background: linear-gradient(to right,
+		rgba(19, 88, 253, 0) 0%,
+		rgba(19, 88, 253, 0) 16.66%,
+		#1358fd 16.66%,
+		#1358fd 50%,
+		#0E1525  50%,
+		#0E1525 83.333%,
+		rgba(19, 88, 253, 0) 83.333%,
+		rgba(19, 88, 253, 0) 100%
+	);
+	z-index: 0;
+}
+/* 让步骤数字圆圈在连接线上方 */
+.step-number {
+	z-index: 10 !important;
+	background: #1358fd !important;
+}
+
+/* 给how-to-container添加相对定位 */
+.how-to-container.position-relative .col-lg-4 {
+	position: relative;
+	z-index: 2;
+}
+.text-right{
+	text-align: right;
+}
+.connect-wallet-btn{
+	border-radius: 100px;
+}
+.shoushu{
+	font-family: 'shoushu';
+}
+.banner-h1{
+	/* width: 340px; */
+	position: relative;
+	display: inline-block;
+	z-index: 1;
+}
+.banner-h1 span{ 
+	position: relative;
+	z-index: 3;
+}
+.banner-h1::after{ 
+	content: "";
+	position: absolute;
+	width: 280px;
+	height: 20px;
+	background-color: #1358FD;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+}
+.countdown-container{
+	background-image: url(../imgs/Exchange-bg.png);
+}
+.z-1{
+	z-index: 1;
+}
+.z-2{
+	z-index: 2;
+}
+.exchange-hm{
+	width: 756px;
+	top: -228px;
+	left: -250px;
+}
+.group-box{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-evenly;
+}
+.group-text{
+	display: flex;
+	align-items: flex-start;
+}
+.group-text img{
+	width: 24px;
+	height: 24px;
+	margin-right: 10px;
+	margin-top: 2px;
+}
+.group-text label {
+	width: 80px;
+	line-height: 28px;
+	white-space: nowrap;
+}
+.group-text span{
+	display: inline-block;
+	line-height: 28px;
+	/* width: 75%; */
+}
+.exchange-right{
+	border-radius: 30px;
+	background: #030F19;
+	backdrop-filter: blur(50px);
+	height: 100%;
+	margin: 0 -12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.equity{
+	border-radius: 16px;
+	background: rgba(0, 0, 0, 0.60);
+	overflow: hidden;
+	border: 1px solid #1358FD;
+}
+input.equity{ 
+	width: auto;
+	flex: 1;
+}
+.exchange-content{
+	border-radius: 30px;
+	background: url(../imgs/exchange-content.png) no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 2;
+}
+.w-80{
+	width: 80%;
+}
+/* pc */
+@media (min-width: 992px) {
+	.earth{
+		position: absolute;
+		width: 509px;
+		height: 509px;
+		left: -170px;
+		top: -18%;
+	}
+	.banner-left{
+		/* padding-left: 10%; */
+	}
+	.no-pc{
+		display: none !important;
+	}
+	.banner-content{
+		/* position: relative; */
+	}
+	.banner-text{
+		position: relative;
+		z-index: 3;
+	}
+	.seahorse1{
+		position: absolute;
+		width: 800px;
+		max-width: 50%;
+		right: 0;
+		top: 78px;
+	}
+	.seahorse1 img{
+		width: 100%;
+
+	}
+	.navbar-nav{
+		padding-right: 10px;
+	}
+	#Exchange{
+		overflow: hidden;
+	}
+	.exchange-content{
+		height: 550px;
+		padding-left: 8px;
+		overflow: hidden;
+		/* background: #000911; */
+		
+	}
+
+}
+

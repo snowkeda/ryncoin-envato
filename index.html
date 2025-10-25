@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="theme-color" content="#000000" />
+    <title>HMC Coin</title>
+    <meta name="description" content="Bootstrap 5 Based HTML Template" />
+    <meta
+      name="keywords"
+      content="bootstrap 5, pwa, mobile template, cordova, phonegap, mobile, html"
+    />
+    <link rel="icon" type="image/ico" href="imgs/favicon.ico" />
+
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="assets/images/icons/72x72.png" />
+    <link rel="apple-touch-icon" href="assets/images/icons/96x96.png" />
+    <link rel="apple-touch-icon" href="assets/images/icons/128x128.png" />
+    <link rel="apple-touch-icon" href="assets/images/icons/144x144.png" />
+    <link rel="apple-touch-icon" href="assets/images/icons/152x152.png" />
+    <link rel="apple-touch-icon" href="assets/images/icons/196x196.png" />
+    <link rel="apple-touch-icon" href="assets/images/icons/512x512.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/h5.css" />
+  </head>
+
+  <body class="body-box">
+    <!-- preloader -->
+    <div id="preloader">
+      <div class="loader">
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+        <div class="circle three"></div>
+      </div>
+    </div>
+    <!-- header -->
+    <header class="header-container style2 bg-black nav-down">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light border-0">
+          <a class="navbar-brand light-logo" href="index.html"
+            ><img src="imgs/logo.png" alt="logo"
+          /></a>
+
+          <div class="navbar-toggler">
+            <a
+              href="javascript:void(0)"
+              class="btn bg-theme-blue border border-black no-pc text-white d-lg-flex px-4 mr-4 connect-wallet-btn"
+              onclick="getWalletAddress()"
+              >Connect Wallet</a
+            >
+            <button
+              class="navbar-toggler px-0 collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0" id="navbar-main">
+              <li class="nav-item menu-item-has-children">
+                <a class="nav-link text-white" href="#">首页</a>
+                <!-- <a class="nav-link text-white mega-menu" href="#">Home</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="#">Home 1</a></li>
+                                <li class="menu-item"><a href="home-2.html">Home 2</a></li>
+                                <li class="menu-item"><a href="home-3.html">Home 3</a></li>
+                                <li class="menu-item"><a href="home-4.html">Home 4</a></li>
+                            </ul> -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#About">关于</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#HowToBuy">如何购买</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#Tokenomics">代币经济学</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#Roadmap">画廊</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#Faq">常见问题</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#Contact">联系我们</a>
+              </li>
+            </ul>
+          </div>
+          <a
+            href="javascript:void(0)"
+            class="btn bg-theme-blue border border-black text-white d-none d-lg-flex px-4 connect-wallet-btn"
+            onclick="getWalletAddress()"
+            >Connect Wallet</a
+          >
+          <div
+            class="text-white language cursor-pointer"
+            onclick="changeLanguage()"
+          >
+            中文
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- header -->
+    <!-- banner -->
+    <div class="banner-container bg-image-cover" style="background: #070910">
+      <div
+        class="container position-relative h-100 banner-left"
+        style="max-width: 100%; padding-right: 0"
+      >
+        <div class="banner-content h-100 container">
+          <div class="row justify-content-between h-100">
+            <div class="col-lg-8 h-100 d-flex align-items-center">
+              <div class="position-relative">
+                <div class="d-flex flex-column py-5 banner-text">
+                  <h1 class="shoushu display5-size ls-n8 lh-5 text-white mb-4">
+                    数字海洋的
+                  </h1>
+                  <h1
+                    class="shoushu display6-size ls-n8 lh-5 text-white mb-4 banner-h1"
+                  >
+                    <span> 黄金锚。 </span>
+                  </h1>
+                  <p class="fs-18 lh-28 text-white-50 mb-4">
+                    HMC作为中马晟蓝海马产业RWA项目的核心代币，是基于海马实体资产发行的数字权益凭证，旨在通过区块链技术将传统海马产业的实体资产价值与数字经济生态深度融合。
+                  </p>
+                  <form
+                    class="p-2 mt-3 w-lg-75"
+                    style="background: #0e1525; border-radius: 30px"
+                    id="referrerForm"
+                  >
+                    <div class="row">
+                      <div class="col-8 d-flex align-items-center">
+                        <input
+                          type="text"
+                          id="referrerInput"
+                          class="form-control bg-transparent text-white fs-16 border-0"
+                          placeholder="请输入邀请人地址"
+                          style="outline: none; box-shadow: none"
+                        />
+                      </div>
+                      <div class="col-4">
+                        <button
+                          class="btn border border-black text-white w-100"
+                          id="bindButton"
+                          type="button"
+                          onclick="bindReferrerFromBanner()"
+                          style="background: #1358fd; border-radius: 30px"
+                        >
+                          绑定
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                  <!-- <div class="mt-2 text-center" id="bindStatus" style="display: none;">
+                    <span class="text-success fs-16">✓ 已绑定邀请人: <span id="boundReferrer" class="text-white"></span></span>
+                  </div> -->
+                </div>
+                <img class="earth no-h5" src="imgs/earth.png" />
+              </div>
+            </div>
+            <div class="seahorse1">
+              <img src="imgs/seahorse1.png" alt="banner" class="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- about -->
+    <!-- countdown -->
+    <div class="countdown-container py-5" id="Exchange">
+      <div class="container py-lg-5 position-relative">
+        <div class="row gy-4 gx-4 exchange-content">
+          <div class="col-lg-6 position-relative z-2 mt-0 pl-20">
+            <div class="group-box">
+              <div class="group-text">
+                <img src="imgs/Group 2085664819.png" />
+                <label class="text-blue fs-16">代币名称：</label>
+                <span class="text-white fs-16">HMC（HMC代币）</span>
+              </div>
+              <div class="group-text">
+                <img src="imgs/Group 2085664820.png" />
+                <label class="text-blue fs-16">发行总量：</label>
+                <span class="text-white fs-16">30亿枚 HMC</span>
+              </div>
+              <div class="group-text">
+                <img src="imgs/Group 2085664821.png" />
+                <label class="text-blue fs-16">私募比例：</label>
+                <span class="text-white fs-16"
+                  >总发行量的10%（即3亿枚 HMC）</span
+                >
+              </div>
+              <div class="group-text">
+                <img src="imgs/Group 2085664818.png" />
+                <label class="text-blue fs-16">发行价格：</label>
+                <span class="text-white fs-16"
+                  >3 U/枚（以USDT或其他等值稳定币计价）</span
+                >
+              </div>
+              <div class="group-text">
+                <img src="imgs/Group 2085664817.png" />
+                <label class="text-blue fs-16">私募机制：</label>
+                <span class="text-white fs-16"
+                  >本次私募通过分配HMB代币（私募临时代币）进行，投资者在私募期间获得HMB代币，私募结束后根据HMB代币数量锁仓并释放HMC代币。</span
+                >
+              </div>
+              <div class="group-text">
+                <img src="imgs/Group 2085664816.png" />
+                <label class="text-blue fs-16">锁仓机制：</label>
+                <span class="text-white fs-16"
+                  >私募完成后，系统将根据投资者持有的HMB代币数量，按1:1比例锁仓对应数量的HMC代币（即1枚
+                  HMB = 1枚 HMC）。</span
+                >
+              </div>
+              <div class="group-text">
+                <img src="imgs/Group 2085664815.png" />
+                <label class="text-blue fs-16">释放周期：</label>
+                <span class="text-white fs-16"
+                  >锁仓的HMC代币将在550天内线性释放。释放从私募结束后的第1天开始，每日释放一定比例，直至550天结束。</span
+                >
+              </div>
+              <div class="group-text">
+                <img src="imgs/Group 2085664814.png" />
+                <label class="text-blue fs-16">释放查询：</label>
+                <span class="text-white fs-16"
+                  >投资者可通过官网钱包或指定平台查看释放进度和余额。</span
+                >
+              </div>
+            </div>
+            <!-- <h2
+              class="display4-size ls-n5 theme-text-stork text-white mb-4 lh-5"
+            >
+              We bring together a vibrant with community of invest advocates to
+              champion
+            </h2> -->
+          </div>
+          <div class="col-lg-6 position-relative z-2 mt-0">
+            <div class="py-4 text-center rounded-3 text-white exchange-right">
+              <div class="d-flex flex-row justify-content-between px-4">
+                <p class="mb-0 text-blue fs-14 lh-24" id="equity-num">
+                  私募数量: 0.00 HMC
+                </p>
+                <p class="mb-0 text-blue fs-14 lh-24" id="equity-total">
+                  总私募量: 300000000 HMC
+                </p>
+              </div>
+              <div class="d-flex flex-column px-4">
+                <div class="progress">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+              </div>
+              <div class="text-blue fs-14 lh-24" id="await-draw"></div>
+
+              <h3 class="display1-size mb-0">Countdown Price Increase</h3>
+              <div
+                class="d-flex flex-row gap-2 justify-content-center my-3 px-4"
+                id="mycountdown"
+              ></div>
+              <!-- <h4 class="fs-18 ls-n2 mt-0">
+                creating a greener future for all.
+              </h4> -->
+              <div class="px-md-2 mb-3">
+                <!-- <div class="row gx-3 gy-3 my-3">
+                  <div class="col-4">
+                    <a
+                      href="#"
+                      class="btn shadow text-blue w-100 d-flex flex-row gap-2 align-items-center ps-2"
+                      style="background-color: rgba(19, 88, 253, 0.15)"
+                      ><img
+                        src="imgs/btc.png"
+                        alt="coin"
+                        width="25"
+                        height="25"
+                      />BTC</a
+                    >
+                  </div>
+                  <div class="col-4">
+                    <a
+                      href="#"
+                      class="btn shadow text-blue w-100 d-flex flex-row gap-2 align-items-center ps-2"
+                      style="background-color: rgba(19, 88, 253, 0.15)"
+                      ><img
+                        src="imgs/eth.png"
+                        alt="coin"
+                        width="25"
+                        height="25"
+                      />ETH</a
+                    >
+                  </div>
+                  <div class="col-4">
+                    <a
+                      href="#"
+                      class="btn shadow text-white w-100 d-flex flex-row gap-2 align-items-center ps-2"
+                      style="background-color: rgba(19, 88, 253, 0.15)"
+                      ><img
+                        src="imgs/ltc.png"
+                        alt="coin"
+                        width="25"
+                        height="25"
+                      />LTC</a
+                    >
+                  </div>
+                </div> -->
+                <div class="row gx-3 gy-3 mb-3">
+                  <div class="col-5">
+                    <div
+                      class="input-group border-0 equity"
+                      style="display: flex; justify-content: space-between"
+                    >
+                      <span class="text-blue">私募单价</span>
+                      <div>
+                        <span class="text-white" id="price">0.00</span>
+                        <span class="text-white-50">USDT</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div
+                      class="input-group equity"
+                      style="display: flex; justify-content: space-between"
+                    >
+                      <span class="text-blue">私募单价</span>
+                      <input
+                        type="number"
+                        class="border-0 shadow-none lh-1 pe-0 equity text-white"
+                        aria-label="ltc"
+                        id="quantity"
+                        placeholder="请输入您要私募的HMC数量"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="pay-num">
+                  预计支付：<span id="payNum">0.00</span> USDT
+                </div>
+                <a
+                  href="javascript:void(0)"
+                  class="btn bg-blue border border-black text-white w-80"
+                  style="border-radius: 3rem"
+                  id="exchange"
+                  ><span class="px-3 fs-20">Join In</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          class="position-absolute exchange-hm z-1"
+          src="imgs/Exchange-hm.png"
+        />
+      </div>
+    </div>
+    <!-- banner -->
+    <!-- about -->
+    <div class="about-container" id="About">
+      <div class="about-wrap" style="position: relative">
+        <img
+          src="imgs/ico.png"
+          alt=""
+          style="position: absolute; right: 20%; top: -8.3rem; width: 50px"
+        />
+        <img
+          src="imgs/ico.png"
+          alt=""
+          style="position: absolute; right: 25%; bottom: 25px; width: 35px"
+        />
+        <img
+          src="imgs/seahorse3.png"
+          class="seahorse3"
+          alt=""
+          style="position: absolute; right: 5%; bottom: 55px; width: 100px"
+        />
+
+        <div class="container" style="max-width: 100%; padding-right: 10%; ">
+          <div class="row justify-content-between">
+            <div
+              class="col-lg-5 col-md-6 d-flex h-100 align-items-center my-auto"
+            >
+              <img src="imgs/seahorse2.png" alt="about" class="about-image" />
+            </div>
+            <div class="col-lg-6 col-md-6 pe-lg-5 py-5">
+              <h2
+                class="display4-size ls-n5 theme-text-stork text-white mb-4 lh-5"
+              >
+                关于HMC：
+              </h2>
+              <p class="fs-18 lh-28 text-white mb-4 position-relative z-2">
+                与传统虚拟货币不同，HMC具有明确的的实体资产锚定——每一枚HMC均对应一尾由项目方认可的生态基地养殖的商品海马，且所有锚定海马通过AIOT设备实时监控，区块链数据存储，确定代币价格与实体资产价值强绑定，从根本上解决虚拟货币“无实体支撑，价值波动剧烈”的痛点，为用户提供兼具安全性与收益性的资产选择
+              </p>
+              <a
+                href="#Contact"
+                class="btn bg-theme-blue shadow text-white px-4"
+                style="border-radius: 3rem"
+                ><span class="px-3">Contact</span></a
+              >
+              <img
+                src="imgs/about-bg.png"
+                class="no-h5"
+                style="position: absolute; top: 0; width: 700px; right: 0;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- how to buy -->
+    <div class="how-to">
+      <div class="col-lg-12" id="HowToBuy">
+        <div class="d-flex justify-content-center py-5">
+          <h2
+            class="display4-size ls-n5 theme-text-stork text-white py-lg-5 lh-5 title"
+          >
+            How to Buy
+          </h2>
+        </div>
+      </div>
+      <div
+        class="row gx-4 gy-5 px-lg-5 how-to-container position-relative justify-content-md-center"
+      >
+        <!-- 连接线 - 只在桌面端显示 -->
+        <div class="progress-line"></div>
+        <!-- <div class="row">
+          <div class="col-lg-4">
+            <span
+              class="rounded-pill w-6 h-6 position-absolute top-0 start-50 translate-middle display1-size bg-blue text-white d-flex align-items-center text-center justify-content-center step-number"
+            >1</span>
+          </div>
+          <div class="col-lg-4">
+            <span
+              class="rounded-pill w-6 h-6 position-absolute top-0 start-50 translate-middle display1-size bg-blue text-white d-flex align-items-center text-center justify-content-center step-number"
+            >2</span>
+          </div>
+          <div class="col-lg-4">
+            <span
+              class="rounded-pill w-6 h-6 position-absolute top-0 start-50 translate-middle display1-size bg-blue text-white d-flex align-items-center text-center justify-content-center step-number"
+            >3</span>
+          </div>
+          
+        </div> -->
+
+        <div class="col-lg-4 clear-width">
+          <div class="bg-border">
+            <div
+              class="howtobuy p-4 pt-5 text-white text-center position-relative"
+            >
+              <span
+                class="rounded-pill w-6 h-6 position-absolute top-0 start-50 translate-middle display1-size bg-blue text-white d-flex align-items-center text-center justify-content-center step-number"
+                >1</span
+              >
+              <h3 class="display1-size mb-3 mt-0">连接您的钱包</h3>
+              <p class="fs-18 lh-28 mb-2">
+                确保您的钱包中存有USDT，以便兑换
+                HMC。您可以选择连接TokenPocket、MetaMask、Trust等等钱包软件，与网站进行交互
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 clear-width">
+          <div class="bg-border">
+            <div
+              class="howtobuy p-4 pt-5 text-white text-center position-relative"
+            >
+              <span
+                class="rounded-pill w-6 h-6 position-absolute top-0 start-50 translate-middle display1-size bg-blue text-white d-flex align-items-center text-center justify-content-center step-number"
+                >2</span
+              >
+              <h3 class="display1-size mb-3 mt-0">绑定邀请关系</h3>
+              <p class="fs-18 lh-28 mb-2">
+                您在私募时会要求进行关系绑定，请确认您的上级用户地址
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 clear-width">
+          <div
+            class="howtobuy last p-4 pt-5 text-white text-center position-relative"
+          >
+            <span
+              class="rounded-pill w-6 h-6 position-absolute top-0 start-50 translate-middle display1-size bg-blue text-white d-flex align-items-center text-center justify-content-center step-number"
+              >3</span
+            >
+            <h3 class="display1-size mb-3 mt-0">支付USDT</h3>
+            <p class="fs-18 lh-28 mb-2">
+              完成以上所有，您可以点击exchange进行认购，获得属于自己的HMC Token
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- countdown -->
+    <!-- tokenomics -->
+    <div class="tokenomics-container" id="Tokenomics">
+      <div class="tokenomics-wrap py-5">
+        <div class="container py-lg-4">
+          <div class="row justify-content-center">
+            <div class="col-sm-12">
+              <div
+                class="d-flex flex-column justify-content-center text-center title"
+              >
+                <h2
+                  class="display4-size ls-n5 theme-text-stork text-white lh-5"
+                >
+                  Tokenomics
+                </h2>
+                <h3 class="sub-title mb-3 mt-0 text-blue lh-1">
+                  20% Liquidity (3 billion tokens)
+                </h3>
+              </div>
+            </div>
+            <div
+              class="col-sm-3 tokenomics-number d-none d-md-block d-lg-block d-xl-block d-xxl-block"
+            >
+              <div class="d-flex flex-column align-items-end h-100">
+                <div
+                  class="number-count d-flex flex-row gap-3 justify-content-end"
+                >
+                  <span class="display4-size text-cyan lh-3"
+                    >22<b class="display1-size">%</b></span
+                  >
+                  <p class="text-cyan lh-6">
+                    Early <br />
+                    Contributes
+                  </p>
+                </div>
+                <div
+                  class="number-count d-flex flex-row gap-3 justify-content-start my-auto mx-auto"
+                >
+                  <span class="display4-size text-orange lh-3"
+                    >4<b class="display1-size">%</b></span
+                  >
+                  <p class="text-orange lh-6">
+                    Airdrop <br />
+                    Contributes
+                  </p>
+                </div>
+                <div
+                  class="number-count d-flex flex-row gap-3 justify-content-end mb-5"
+                >
+                  <span class="display4-size text-pink lh-3"
+                    >11<b class="display1-size">%</b></span
+                  >
+                  <p class="text-pink lh-6">
+                    Research <br />
+                    Marketing
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 px-0 mt-5">
+              <canvas id="myPieChart"></canvas>
+            </div>
+            <div
+              class="col-sm-3 tokenomics-number d-none d-md-block d-lg-block d-xl-block d-xxl-block"
+            >
+              <div class="d-flex flex-column align-items-end h-100">
+                <div
+                  class="number-count d-flex flex-row gap-3 justify-content-start me-auto"
+                >
+                  <span class="display4-size text-info lh-3"
+                    >33<b class="display1-size">%</b></span
+                  >
+                  <p class="text-info lh-6">
+                    Presale <br />
+                    Liquidity
+                  </p>
+                </div>
+                <div
+                  class="number-count d-flex flex-row gap-3 justify-content-start my-auto mx-auto"
+                >
+                  <span class="display4-size text-secondary lh-3"
+                    >15<b class="display1-size">%</b></span
+                  >
+                  <p class="text-secondary lh-6">Burn <br />Liquidity</p>
+                </div>
+                <div
+                  class="number-count d-flex flex-row gap-3 justify-content-end mb-5 me-auto"
+                >
+                  <span class="display4-size text-pink lh-3"
+                    >12<b class="display1-size">%</b></span
+                  >
+                  <p class="text-pink lh-6">Angel <br />Investors</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 d-flex d-md-none d-lg-none d-xl-none d-xxl-none mt-3"
+            >
+              <div class="row gy-4">
+                <div class="col-6">
+                  <div
+                    class="number-count d-flex flex-row gap-3 justify-content-center"
+                  >
+                    <span class="display4-size text-cyan lh-3"
+                      >22<b class="display1-size">%</b></span
+                    >
+                    <p class="text-cyan lh-6">
+                      Early <br />
+                      Contributes
+                    </p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div
+                    class="number-count d-flex flex-row gap-3 justify-content-center"
+                  >
+                    <span class="display4-size text-orange lh-3"
+                      >4<b class="display1-size">%</b></span
+                    >
+                    <p class="text-orange lh-6">
+                      Airdrop <br />
+                      Contributes
+                    </p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div
+                    class="number-count d-flex flex-row gap-3 justify-content-center"
+                  >
+                    <span class="display4-size text-pink lh-3"
+                      >11<b class="display1-size">%</b></span
+                    >
+                    <p class="text-pink lh-6">
+                      Research <br />
+                      Marketing
+                    </p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div
+                    class="number-count d-flex flex-row gap-3 justify-content-center"
+                  >
+                    <span class="display4-size text-info lh-3"
+                      >33<b class="display1-size">%</b></span
+                    >
+                    <p class="text-info lh-6">
+                      Presale <br />
+                      Liquidity
+                    </p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div
+                    class="number-count d-flex flex-row gap-3 justify-content-center"
+                  >
+                    <span class="display4-size text-secondary lh-3"
+                      >15<b class="display1-size">%</b></span
+                    >
+                    <p class="text-secondary lh-6">Burn <br />Liquidity</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div
+                    class="number-count d-flex flex-row gap-3 justify-content-center"
+                  >
+                    <span class="display4-size text-pink lh-3"
+                      >12<b class="display1-size">%</b></span
+                    >
+                    <p class="text-pink lh-6">Angel <br />Investors</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gy-4 gx-4 roadmap" id="Roadmap">
+            <div class="col-sm-12 py-5">
+              <div
+                class="d-flex flex-column justify-content-center text-center"
+              >
+                <h2
+                  class="display4-size ls-n5 theme-text-stork text-white lh-5 roadmap-title"
+                >
+                  Roadmap
+                </h2>
+              </div>
+            </div>
+            <div style="width: 35.5%">
+              <img src="imgs/callery1.png" alt="" />
+            </div>
+            <div style="width: 64.5%">
+              <img src="imgs/callery2.png" alt="" />
+              <img src="imgs/callery3.png" alt="" style="margin-top: 1.5rem" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- tokenomics -->
+    <!-- faq and contact -->
+    <div class="faq-container pt-5 pb-4" id="Faq">
+      <div class="container py-lg-5">
+        <div class="row justify-content-center">
+          <div class="col-sm-12">
+            <div
+              class="d-flex flex-column justify-content-center text-center title"
+            >
+              <h2 class="display4-size ls-n5 theme-text-stork text-white lh-5">
+                Got Questions?
+              </h2>
+              <h3 class="display1-size mb-3 mt-0 text-blue lh-1">
+                We've Got Answers!
+              </h3>
+            </div>
+          </div>
+          <div class="col-lg-8 mt-5">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    HMC是什么？
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <p class="fs-17 lh-28 mb-2">
+                      HMC作为中马晟蓝海马产业RWA项目的核心代币，是基于海马实体资产发行的数字权益凭证，旨在通过区块链技术将传统海马产业的实体资产价值与数字经济生态深度融合
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    HMC的锚定规则是什么？
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <p class="fs-17 lh-28 mb-2">
+                      “一币一海马”锚定机制，为每一尾海马生成唯一的数字身份证，基于区块链智能合约，每生成一个海马数字身份证，铸造一枚HMC，并将两者通过HASH绑定，绑定关系写入区块链，不可篡改
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    如何进行实物交割？
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <p class="fs-17 lh-28 mb-2">
+                      用户可通过中马晟蓝官方APP提交实物交割申请，填写HMC兑换数量，收货地址，联系方式等信息，官方收到申请3个工作日内，安排指定生产基地进行海马加工，并在检测合格之后交付给用户
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                    HMC的技术保障？
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <p class="fs-17 lh-28 mb-2">
+                      区块链节点仅对中马晟蓝、养殖基地、第三方审计机构、合规交易平台进行审核开放，避免匿名节点带来的安全风险，支持每秒1000+笔安全交易，满足行业内大规模交易需求，采用“通道隔离”技术保护商业隐私
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- faq and contact -->
+    <!-- footer -->
+    <div class="footer" id="Contact">
+      <div class="footer-wrap py-5 bg-black">
+        <div class="container pt-lg-5 pb-lg-4 my-3">
+          <div class="row gy-4 gx-4">
+            <div class="col-lg-6 text-white">
+              <span class="h1">Subscribe Our Newsletter</span>
+              <form
+                class="p-2 mt-3 w-lg-75"
+                style="background: #0e1525; border-radius: 3rem"
+              >
+                <div class="row">
+                  <div class="col-8">
+                    <input
+                      type="text"
+                      class="form-control bg-transparent text-white fs-16 border-0"
+                      placeholder="Enter Email Address."
+                    />
+                  </div>
+                  <div class="col-4">
+                    <button
+                      class="btn text-white bg-blue w-100"
+                      style="border-radius: 3rem"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- <div class="col-lg-3 text-white">
+              <span class="h1">Contact</span>
+              <p class="lh-24 fs-16 mb-0 mt-3">
+                Sunrise Tower, 15 Oceanview Avenue, Blue Bay City, Coastal
+                State, 45890
+              </p>
+            </div> -->
+            <div class="col-lg-3 text-white">
+              <span class="h1">Follow</span>
+              <ul class="navbar-nav mt-4 d-flex flex-row gap-3">
+                <li>
+                  <a href="#" aria-label="mastodon"
+                    ><i class="bi-mastodon text-white display1-size"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" aria-label="telegram"
+                    ><i class="bi-telegram text-white display1-size"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" aria-label="twitter"
+                    ><i class="bi-twitter-x text-white display1-size"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" aria-label="instagram"
+                    ><i class="bi-instagram text-white display1-size"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" aria-label="twitch"
+                    ><i class="bi-twitch text-white display1-size"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mask" id="mask">
+      <div class="mask-box">
+        <div class="mask-body">
+          <div class="title">绑定上级</div>
+          <input type="text" placeholder="请输入上级地址" id="paddr" />
+          <div class="flex">
+            <div class="btn" id="cancel">取消</div>
+            <div class="btn" id="bind">绑定</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popup"></div>
+    <div
+      id="loading"
+      style="
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 20px 40px;
+        border-radius: 8px;
+        font-size: 18px;
+        z-index: 9999;
+      "
+    >
+      Loading...
+    </div>
+    <!-- footer -->
+
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/ethers.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+      var address, contractAbi, usdtAbi;
+      const contractAddress = "0xf1D75949710D6223F8BA1425F9D84D024eC05C1c";
+      const hmbAddress = "0xb1fB9F8c9Ce94497De0569be71320cbF6E424Ccd";
+      //   const contractAddress = "0xB109e40AD4bd612784522e06c931a0CB84384150";
+      //   const hmbAddress = "0xC25717B57ab14201F8416C2174e12e01CcB2e2F4";
+      const usdtAddress = "0xb575796D293f37F112f3694b8ff48D711FE67EC7";
+      var myPrice = 0;
+      const reg = /^(?:0*\.[0]*[1-9]\d*|[1-9]\d*(?:\.\d*)?)$/;
+
+      async function switchNetwork(chainIdHex) {
+        if (!window.ethereum) {
+          $("#popup")
+            .text("请安装 MetaMask！")
+            .fadeIn(400)
+            .delay(2000)
+            .fadeOut(400);
+          return;
+        }
+
+        try {
+          await window.ethereum.request({
+            method: "wallet_switchEthereumChain",
+            params: [{ chainId: chainIdHex }], // 例如 '0x1' 是以太坊主网
+          });
+          console.log("切换成功");
+        } catch (switchError) {
+          // 如果用户钱包中没有该链，需要添加新链
+          if (switchError.code === 4902) {
+            try {
+              await window.ethereum.request({
+                method: "wallet_addEthereumChain",
+                params: [
+                  {
+                    chainId: chainIdHex,
+                    chainName: "Xone",
+                    nativeCurrency: {
+                      name: "XONE Token",
+                      symbol: "XOC",
+                      decimals: 18,
+                    },
+                    rpcUrls: ["https://rpc.xone.org"], // RPC 地址
+                    blockExplorerUrls: ["https://xonescan.com/"], // 区块浏览器地址
+                  },
+                ],
+              });
+              console.log("添加并切换成功");
+            } catch (addError) {
+              console.error("添加链失败", addError);
+            }
+          } else {
+            console.error("切换链失败", switchError);
+          }
+        }
+      }
+
+      function connetWallet() {
+        return new Promise(async (resolve, reject) => {
+          var { ethereum } = window;
+          try {
+            if (ethereum) {
+              const accounts = await ethereum.request({
+                method: "eth_requestAccounts",
+              });
+              resolve(accounts[0]);
+            } else {
+              reject();
+            }
+          } catch (err) {
+            reject();
+          }
+        });
+      }
+
+      async function getWalletAddress() {
+        address = await connetWallet();
+        $(".connect-wallet-btn").text(
+          `${address.slice(0, 4)}****${address.slice(-4)}`
+        );
+        checkReferrerStatus(); // 检查绑定状态
+      }
+
+      function resetWalletState() {
+        // 清空地址
+        address = null;
+
+        // 恢复按钮状态
+        $(".connect-wallet-btn").show().text("Connect Wallet");
+        $(".disconnect-wallet-btn").hide();
+
+        // 清空绑定状态
+        $("#referrerInput").prop("disabled", false).val("");
+        $("#bindButton").prop("disabled", false).text("绑定");
+        $("#bindStatus").fadeOut(400);
+
+        // 清空其他显示内容
+        $("#equity-num").text("私募数量: 0.00 HMC");
+        $("#equity-total").text("总私募量: 300000000 HMC");
+        $("#await-draw").text("");
+        $("#progress-bar").css({ width: "0%" });
+        $("#price").text("0.00");
+        $("#quantity").val("");
+        $("#payNum").text("0.00");
+      }
+
+      function getAbi(url) {
+        return new Promise((res, rej) => {
+          fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+              res(data);
+            })
+            .catch((error) => console.error("加载JSON失败", error));
+        });
+      }
+
+      function init(address, abi) {
+        return new Promise(async (res, rej) => {
+          const { ethereum } = window;
+          const provider = await new ethers.providers.Web3Provider(ethereum);
+          const signer = await provider.getSigner();
+          const contract = await new ethers.Contract(address, abi, signer);
+          res(contract);
+        });
+      }
+
+      async function getEndtime() {
+        const contract = await init(contractAddress, contractAbi);
+        const phase = await contract.getCurrentPhase();
+        const n = phase.toString();
+        const timeList = await contract.getAllPhases();
+        if (+n + 1 > timeList.length) return showPop("私募已结束");
+        const info = timeList[n];
+        const temp = info.endTime.toString() * 1000;
+        const year = new Date(temp).getFullYear();
+        const month = new Date(temp).getMonth() + 1;
+        const day = new Date(temp).getDate();
+        simplyCountdown("#mycountdown", {
+          year,
+          month,
+          day,
+          zeroPad: true,
+        });
+        const userInfo = await contract.getUserInfo(address);
+        if (!userInfo.isSpecial) {
+          myPrice = info.price.toString() / 10000;
+          $("#price").text((info.price.toString() / 10000).toFixed(2));
+        } else {
+          myPrice = info.specialPrice.toString() / 10000;
+          $("#price").text((info.specialPrice.toString() / 10000).toFixed(2));
+        }
+      }
+
+      async function checkReferrerStatus() {
+        try {
+          const contract = await init(contractAddress, contractAbi);
+          const parentAddr = await contract.referrer(address);
+          if (parentAddr !== "0x0000000000000000000000000000000000000000") {
+            // 已绑定
+            $("#referrerInput")
+              .prop("disabled", true)
+              .val(`${parentAddr.slice(0, 6)}...${parentAddr.slice(-4)}`);
+            $("#bindButton").prop("disabled", true).text("已绑定");
+            $("#boundReferrer").text(
+              `${parentAddr.slice(0, 6)}...${parentAddr.slice(-4)}`
+            );
+            // $("#bindStatus").fadeIn(400);
+          } else {
+            // 未绑定
+            $("#referrerInput").prop("disabled", false).val("");
+            $("#bindButton").prop("disabled", false).text("绑定");
+            // $("#bindStatus").fadeOut(400);
+          }
+        } catch (err) {
+          console.error("检查绑定状态失败:", err);
+        }
+      }
+
+      async function bindReferrerFromBanner() {
+        if (!address) {
+          // 未连接钱包,直接触发连接钱包
+          try {
+            await getWalletAddress();
+            showPop("钱包已连接,请继续绑定邀请人");
+          } catch (err) {
+            showPop("请先连接钱包");
+          }
+          return;
+        }
+
+        const referrerAddr = $("#referrerInput").val().trim();
+        if (!referrerAddr) {
+          showPop("请输入邀请人地址");
+          return;
+        }
+
+        // 验证地址格式
+        if (!/^0x[a-fA-F0-9]{40}$/.test(referrerAddr)) {
+          showPop("邀请人地址格式不正确");
+          return;
+        }
+
+        // 不能绑定自己
+        if (referrerAddr.toLowerCase() === address.toLowerCase()) {
+          showPop("不能绑定自己为邀请人");
+          return;
+        }
+
+        try {
+          $("#loading").show();
+          const contract = await init(contractAddress, contractAbi);
+          const tx = await contract.bindReferrer(referrerAddr);
+          await tx.wait();
+          $("#loading").hide();
+          showPop("绑定成功!");
+          $("#referrerInput").val("");
+          setTimeout(() => checkReferrerStatus(), 1000);
+        } catch (err) {
+          $("#loading").hide();
+          const msg = err?.data?.message || err?.message || "绑定失败";
+          showPop(msg);
+        }
+      }
+
+      async function getBalance() {
+        const contract = await init(contractAddress, contractAbi);
+        const hmbContract = await init(hmbAddress, usdtAbi);
+        const balance = await hmbContract.balanceOf(contractAddress);
+        const bnum = ethers.utils.formatUnits(balance, 18);
+        const userInfo = await contract.getUserInfo(address);
+        const start = await contract.VESTING_START_TIME();
+        if (start.toString() * 1000 <= new Date().getTime()) {
+          const drawNum = ethers.utils.formatUnits(userInfo.claimed, 18);
+          const lockedNum = ethers.utils.formatUnits(userInfo.totalHMC, 18);
+          const claimableHMC = ethers.utils.formatUnits(
+            userInfo.claimableHMC,
+            18
+          );
+          const proWidth = +drawNum / lockedNum;
+          $("#equity-num").text(`领取HMC数量：${drawNum} HMC`);
+          $("#equity-total").text(`锁仓数量：${lockedNum} HMC`);
+          $("#await-draw").text(`待领取数量：${claimableHMC} HMC`);
+          $("#progress-bar").css({ width: `${proWidth * 100}%` });
+          $("#exchange")
+            .text("GET HMC")
+            .css({
+              "background-color": +claimableHMC > 0 ? "#0d6efd" : "#222",
+            });
+        } else {
+          const equity = 300000000 - bnum;
+          const proWidth = equity / 300000000;
+          $("#equity-num").text(`私募数量：${equity} HMC`);
+          $("#equity-total").text(`总私募量：300000000 HMC`);
+          $("#progress-bar").css({ width: `${proWidth * 100}%` });
+        }
+      }
+
+      $("#exchange").click(async function () {
+        const contract = await init(contractAddress, contractAbi);
+        const start = await contract.VESTING_START_TIME();
+        if (start.toString() * 1000 <= new Date().getTime()) {
+          const userInfo = await contract.getUserInfo(address);
+          const claimableHMC = ethers.utils.formatUnits(
+            userInfo.claimableHMC,
+            18
+          );
+          console.log(+claimableHMC);
+          if (+claimableHMC > 0) {
+            drawHMC();
+          }
+        } else {
+          sendUsdt();
+        }
+      });
+
+      async function drawHMC() {
+        try {
+          $("#loading").show();
+          const contract = await init(contractAddress, contractAbi);
+          contract
+            .claimHMC()
+            .then(async (res) => {
+              await res.wait();
+              $("#loading").hide();
+              showPop("领取成功");
+              setTimeout(() => getBalance(), 2000);
+            })
+            .catch((error) => {
+              $("#loading").hide();
+              showPop(error);
+            });
+        } catch (err) {
+          $("#loading").hide();
+          const msg = err?.data?.message || err?.message;
+          showPop(msg);
+        }
+      }
+
+      async function sendUsdt() {
+        const usdtContract = await init(usdtAddress, usdtAbi);
+        const usdt = await usdtContract.balanceOf(address);
+        const myBalance = ethers.utils.formatUnits(usdt, 6);
+        const quantity = $("#quantity").val();
+        if (!quantity) return showPop("请输入私募数量");
+        if (!reg.test(quantity)) return showPop("私募数量不能小于0");
+        if (+quantity * myPrice > myBalance) return showPop("钱包余额不足");
+        const contract = await init(contractAddress, contractAbi);
+        const parentAddr = await contract.referrer(address);
+        if (parentAddr === "0x0000000000000000000000000000000000000000") {
+          $("#mask").fadeIn(400);
+        } else {
+          checkAprove();
+        }
+      }
+
+      async function searchAllowance(constract, owner, spender) {
+        return await constract.allowance(owner, spender);
+      }
+
+      async function checkAprove() {
+        const quantity = $("#quantity").val();
+        const money = Math.ceil(quantity).toString() * myPrice;
+        const usdtContract = await init(usdtAddress, usdtAbi);
+        const parsedAmount = ethers.utils
+          .parseUnits(money.toString(), 6)
+          .toString();
+        try {
+          const approveCount = await searchAllowance(
+            usdtContract,
+            address,
+            contractAddress
+          );
+          $("#loading").show();
+          if (+ethers.utils.formatUnits(approveCount) >= +money) {
+            contractRecharge(parsedAmount);
+          } else {
+            usdtContract
+              .approve(contractAddress, parsedAmount)
+              .then(async (tx) => {
+                await tx.wait();
+                contractRecharge(parsedAmount);
+              })
+              .catch(() => $("#loading").hide());
+          }
+        } catch (err) {
+          $("#loading").hide();
+          const msg = err?.data?.message || err?.message;
+          showPop(msg);
+        }
+      }
+
+      async function contractRecharge(parsedAmount) {
+        try {
+          const contract = await init(contractAddress, contractAbi);
+          contract
+            .purchaseHMB(parsedAmount)
+            .then(async (res) => {
+              await res.wait();
+              $("#loading").hide();
+              showPop("提交成功,请等待区块链确认");
+              $("#quantity").val("");
+              getBalance();
+            })
+            .catch(() => $("#loading").hide());
+        } catch (err) {
+          $("#loading").hide();
+          if (
+            err?.message ===
+              "execution reverted: BEP20: transfer amount exceeds balance" ||
+            err?.error?.message ===
+              "execution reverted: BEP20: transfer amount exceeds balance" ||
+            err?.data?.message ===
+              "execution reverted: BEP20: transfer amount exceeds balance"
+          ) {
+            showPop("钱包余额不足");
+          } else {
+            const msg = err?.data?.message || err?.message;
+            showPop(msg);
+          }
+        }
+      }
+
+      $("#quantity").on("input", function () {
+        const val = $(this).val();
+        if (!val) {
+          $("#payNum").text("0.00");
+        } else {
+          $("#payNum").text((+myPrice * val).toFixed(2));
+        }
+      });
+
+      $("#cancel").click(function () {
+        $("#mask").fadeOut(400);
+      });
+
+      $("#bind").click(async function () {
+        const parent = $("#paddr").val();
+        if (!parent) return showPop("请输入上级地址");
+        try {
+          $("#loading").show();
+          const contract = await init(contractAddress, contractAbi);
+          contract.bindReferrer(parent).then(async (res) => {
+            await res.wait();
+            $("#loading").hide();
+            $("#mask").fadeOut(400);
+            $("#paddr").val("");
+            checkReferrerStatus(); // 更新banner区域的绑定状态
+            setTimeout(() => checkAprove(), 500);
+          });
+        } catch (err) {
+          $("#loading").hide();
+          $("#mask").fadeOut(400);
+          $("#paddr").val("");
+          const msg = err?.data?.message || err?.message;
+          showPop(msg);
+        }
+      });
+
+      function showPop(msg) {
+        $("#popup").text(msg).fadeIn(400).delay(2000).fadeOut(400);
+      }
+
+      $(async function () {
+        await switchNetwork("0xE89");
+        contractAbi = await getAbi("./assets/json/abi.json");
+        usdtAbi = await getAbi("./assets/json/usdtAbi.json");
+        getWalletAddress(); // 这个会自动调用 checkReferrerStatus
+        getEndtime();
+        getBalance();
+
+        if (window.ethereum) {
+          const provider = new ethers.providers.Web3Provider(window.ethereum);
+
+          // 监听账户变化
+          window.ethereum.on("accountsChanged", (accounts) => {
+            if (accounts.length > 0) {
+              // 切换到新账户,重新获取信息
+              getWalletAddress(); // 切换账户时重新检查绑定状态
+              getEndtime();
+              getBalance();
+            } else {
+              // 钱包已断开连接,恢复初始状态
+              console.log("钱包已断开连接");
+              resetWalletState();
+              showPop("钱包已断开连接");
+            }
+          });
+
+          // 监听链切换
+          window.ethereum.on("chainChanged", (chainId) => {
+            console.log("链已切换:", chainId);
+            // 链切换后刷新页面
+            window.location.reload();
+          });
+
+          // 监听连接断开
+          window.ethereum.on("disconnect", (error) => {
+            console.log("钱包连接已断开:", error);
+            resetWalletState();
+            showPop("钱包连接已断开");
+          });
+        } else {
+          console.log("请安装MetaMask钱包");
+        }
+      });
+    </script>
+    <script>
+      //   simplyCountdown("#mycountdown", {
+      //     year: 2025,
+      //     month: 10,
+      //     day: 24,
+      //     zeroPad: true,
+      //   });
+    </script>
+
+    <script>
+      // copyText 函数已废弃，绑定功能已移至 banner 区域
+      // function copyText() { ... }
+      // function copyToClipboard(text) { ... }
+
+      // Get the canvas element
+      const ctx = document.getElementById("myPieChart").getContext("2d");
+
+      // Data for the pie chart
+      const data = {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Black"],
+        datasets: [
+          {
+            label: "Colors Distribution",
+            data: [15, 30, 15, 21, 27, 21], // Values for each segment
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.7)",
+              "rgba(54, 162, 235, 0.7)",
+              "rgba(255, 206, 86, 0.7)",
+              "rgba(75, 192, 192, 0.7)",
+              "rgba(153, 102, 255, 0.7)",
+              "#10d876",
+            ],
+            borderColor: ["black", "black", "black", "black", "black)"],
+            borderWidth: 1,
+          },
+        ],
+      };
+
+      // Configuration object for the chart
+      const config = {
+        type: "polarArea", // Type of chart
+        data: data,
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: false,
+            },
+          },
+          scales: {
+            r: {
+              // Radial scale configuration
+              ticks: {
+                beginAtZero: true,
+                backdropColor: "transparent", // Make ticks background transparent
+                color: "#000", // Optional: Customize tick font color
+              },
+            },
+          },
+          title: {
+            display: false,
+          },
+        },
+      };
+
+      // Create and render the chart
+      new Chart(ctx, config);
+    </script>
+    <script>
+      const translations = {
+        zh: {
+          home: "首页",
+          about: "关于",
+          howToBuy: "如何购买",
+          tokenomics: "代币经济学",
+          roadmap: "画廊",
+          faq: "常见问题",
+          contact: "联系我们",
+          connectWallet: "连接钱包",
+          placeholder: "请输入邀请人地址",
+          bind: "绑定",
+          bound: "已绑定",
+          bannerTitle1: "数字海洋的",
+          bannerTitle2: "黄金锚。",
+          bannerDesc:
+            "HMC作为中马晟蓝海马产业RWA项目的核心代币，是基于海马实体资产发行的数字权益凭证，旨在通过区块链技术将传统海马产业的实体资产价值与数字经济生态深度融合。",
+          exchange: {
+            title: "私募详情",
+            nameLabel: "代币名称：",
+            nameValue: "HMC（HMC代币）",
+            totalLabel: "发行总量：",
+            totalValue: "30亿枚 HMC",
+            privatePercentLabel: "私募比例：",
+            privatePercentValue: "总发行量的10%（即3亿枚 HMC）",
+            priceLabel: "发行价格：",
+            priceValue: "3 U/枚（以USDT或其他等值稳定币计价）",
+            privateMethodLabel: "私募机制：",
+            privateMethodValue:
+              "本次私募通过分配HMB代币进行，投资者获得HMB代币，私募结束后锁仓并释放HMC代币。",
+            lockLabel: "锁仓机制：",
+            lockValue:
+              "私募完成后，系统按1:1比例锁仓HMC（1枚 HMB = 1枚 HMC）。",
+            releaseLabel: "释放周期：",
+            releaseValue:
+              "锁仓的HMC代币将在550天内线性释放，从私募结束后第1天起每日释放。",
+            queryLabel: "释放查询：",
+            queryValue: "投资者可通过官网钱包或平台查看释放进度和余额。",
+            privateCount: "私募数量：",
+            totalCount: "总私募量：",
+            privateUnitPrice: "私募单价",
+            privateInput: "请输入您要私募的HMC数量",
+            payText: "预计支付：",
+            join: "立即参与",
+          },
+          aboutTitle: "关于HMC：",
+          aboutDesc:
+            "HMC具有明确的实体资产锚定——每一枚HMC均对应一尾经项目方认证的生态基地养殖海马。通过AIOT实时监控与区块链存证，实现虚拟与实体价值深度绑定。",
+          howTitle: "如何购买",
+          howStep1Title: "连接您的钱包",
+          howStep1Text:
+            "确保钱包中有USDT，可使用TokenPocket、MetaMask或Trust等钱包连接网站。",
+          howStep2Title: "绑定邀请关系",
+          howStep2Text: "确认您的上级用户地址后进行关系绑定。",
+          howStep3Title: "支付USDT",
+          howStep3Text: "完成绑定后，点击Exchange认购即可获得HMC。",
+          tokenomicsTitle: "代币经济学",
+          roadmapTitle: "画廊",
+          faqMainTitle: "常见问题",
+          faqSubTitle: "我们为您解答！",
+          faqQ1: "HMC是什么？",
+          faqA1:
+            "HMC是中马晟蓝海马产业RWA项目的核心代币，代表海马实体资产的数字权益。",
+          faqQ2: "HMC的锚定规则是什么？",
+          faqA2:
+            "采用“一币一海马”机制，每一尾海马生成唯一数字身份证，与HMC通过HASH绑定上链。",
+          faqQ3: "如何进行实物交割？",
+          faqA3:
+            "用户可通过官方APP申请实物交割，3个工作日内安排生产基地加工并交付。",
+          faqQ4: "HMC的技术保障？",
+          faqA4:
+            "区块链节点仅对官方、基地及审计机构开放，支持每秒1000+笔交易，保障隐私安全。",
+          footerSubscribe: "订阅我们的新闻简报",
+          footerPlaceholder: "请输入邮箱地址",
+          footerSubmit: "提交",
+          footerFollow: "关注我们",
+        },
+        en: {
+          home: "Home",
+          about: "About",
+          howToBuy: "How To Buy",
+          tokenomics: "Tokenomics",
+          roadmap: "Gallery",
+          faq: "FAQ",
+          contact: "Contact Us",
+          connectWallet: "Connect Wallet",
+          placeholder: "Enter referral address",
+          bind: "Bind",
+          bound: "Bound",
+          bannerTitle1: "The Golden Anchor",
+          bannerTitle2: "of the Digital Ocean.",
+          bannerDesc:
+            "HMC is the core token of the China-Malaysia Seahorse RWA Project, representing digital equity backed by real seahorse assets.",
+          exchange: {
+            title: "Private Sale Details",
+            nameLabel: "Token Name:",
+            nameValue: "HMC (HMC Token)",
+            totalLabel: "Total Supply:",
+            totalValue: "3 Billion HMC",
+            privatePercentLabel: "Private Sale Ratio:",
+            privatePercentValue: "10% of total supply (300 Million HMC)",
+            priceLabel: "Issue Price:",
+            priceValue: "3 USDT per token",
+            privateMethodLabel: "Private Sale Mechanism:",
+            privateMethodValue:
+              "The sale distributes temporary HMB tokens; investors will later receive equivalent locked HMC tokens.",
+            lockLabel: "Lock Mechanism:",
+            lockValue:
+              "After the sale, HMC tokens are locked 1:1 with HMB (1 HMB = 1 HMC).",
+            releaseLabel: "Release Cycle:",
+            releaseValue:
+              "Locked HMC tokens are linearly released over 550 days starting from the day after the sale ends.",
+            queryLabel: "Release Query:",
+            queryValue:
+              "Investors can view release progress and balance via the official site or supported platforms.",
+            privateCount: "Private Amount:",
+            totalCount: "Total Private Volume:",
+            privateUnitPrice: "Private Price",
+            privateInput: "Enter amount of HMC to purchase",
+            payText: "Estimated Payment:",
+            join: "Join Now",
+          },
+          aboutTitle: "About HMC:",
+          aboutDesc:
+            "Unlike traditional cryptocurrencies, HMC is anchored by tangible assets—each HMC corresponds to a real seahorse recorded on blockchain via AIoT monitoring.",
+          howTitle: "How To Buy",
+          howStep1Title: "Connect Your Wallet",
+          howStep1Text:
+            "Ensure your wallet holds USDT, and connect using TokenPocket, MetaMask, or Trust Wallet.",
+          howStep2Title: "Bind Referral",
+          howStep2Text:
+            "Confirm your inviter’s wallet address before participating in the private sale.",
+          howStep3Title: "Pay USDT",
+          howStep3Text: "Click Exchange to subscribe and receive HMC tokens.",
+          tokenomicsTitle: "Tokenomics",
+          roadmapTitle: "Gallery",
+          faqMainTitle: "Got Questions?",
+          faqSubTitle: "We’ve Got Answers!",
+          faqQ1: "What is HMC?",
+          faqA1:
+            "HMC is the core token of the China-Malaysia Seahorse RWA Project — a digital equity certificate backed by real seahorse assets.",
+          faqQ2: "What is the anchoring rule of HMC?",
+          faqA2:
+            "Under the 'One Token, One Seahorse' mechanism, each seahorse is assigned a blockchain-verified digital ID linked to HMC.",
+          faqQ3: "How is physical delivery handled?",
+          faqA3:
+            "Users can apply for physical delivery via the official app, processed and delivered within 3 business days.",
+          faqQ4: "What ensures HMC’s security?",
+          faqA4:
+            "Blockchain nodes are limited to verified partners and institutions, supporting 1000+ TPS and privacy isolation.",
+          footerSubscribe: "Subscribe Our Newsletter",
+          footerPlaceholder: "Enter Email Address.",
+          footerSubmit: "Submit",
+          footerFollow: "Follow",
+        },
+      };
+
+      let currentLang =
+        localStorage.getItem("lang") ||
+        (navigator.language.includes("zh") ? "zh" : "en");
+
+      function applyLanguage(lang) {
+        const t = translations[lang];
+        const ex = t.exchange;
+        const isZh = lang === "zh";
+        document.querySelector(".language").innerText = isZh
+          ? "中文"
+          : "English";
+        localStorage.setItem("lang", lang);
+
+        // 顶部导航
+        const nav = document.querySelectorAll("#navbar-main li a");
+        if (nav.length >= 7) {
+          nav[0].innerText = t.home;
+          nav[1].innerText = t.about;
+          nav[2].innerText = t.howToBuy;
+          nav[3].innerText = t.tokenomics;
+          nav[4].innerText = t.roadmap;
+          nav[5].innerText = t.faq;
+          nav[6].innerText = t.contact;
+        }
+
+        // Connect Wallet
+        document
+          .querySelectorAll(".connect-wallet-btn")
+          .forEach((btn) => (btn.innerText = t.connectWallet));
+
+        // 输入框
+        const refInput = document.getElementById("referrerInput");
+        if (refInput) refInput.placeholder = t.placeholder;
+
+        const bindBtn = document.getElementById("bindButton");
+        if (bindBtn) bindBtn.innerText = t.bind;
+
+        // Banner
+        const bannerH1s = document.querySelectorAll(".banner-text h1");
+        if (bannerH1s.length > 1) {
+          bannerH1s[0].innerText = t.bannerTitle1;
+          bannerH1s[1].innerText = t.bannerTitle2;
+        }
+        const bannerP = document.querySelector(".banner-text p");
+        if (bannerP) bannerP.innerText = t.bannerDesc;
+
+        // Exchange
+        const labels = document.querySelectorAll("#Exchange .group-text label");
+        // 动态控制 Exchange label 宽度
+        labels.forEach((label) => {
+          label.style.minWidth = isZh ? "80px" : "180px";
+          label.style.display = "inline-block";
+        });
+        const spans = document.querySelectorAll("#Exchange .group-text span");
+        const exPairs = [
+          [ex.nameLabel, ex.nameValue],
+          [ex.totalLabel, ex.totalValue],
+          [ex.privatePercentLabel, ex.privatePercentValue],
+          [ex.priceLabel, ex.priceValue],
+          [ex.privateMethodLabel, ex.privateMethodValue],
+          [ex.lockLabel, ex.lockValue],
+          [ex.releaseLabel, ex.releaseValue],
+          [ex.queryLabel, ex.queryValue],
+        ];
+        labels.forEach((label, i) => (label.innerText = exPairs[i]?.[0] || ""));
+        spans.forEach((span, i) => (span.innerText = exPairs[i]?.[1] || ""));
+
+        const privateTexts = document.querySelectorAll(
+          "#Exchange .input-group span.text-blue"
+        );
+        if (privateTexts.length >= 2) {
+          privateTexts[0].innerText = ex.privateUnitPrice;
+          privateTexts[1].innerText = ex.privateUnitPrice;
+        }
+
+        const quantityInput = document.getElementById("quantity");
+        if (quantityInput) quantityInput.placeholder = ex.privateInput;
+
+        const payNum = document.querySelector(".pay-num");
+        if (payNum) payNum.firstChild.textContent = ex.payText + " ";
+
+        const joinBtn = document.getElementById("exchange");
+        if (joinBtn) joinBtn.innerText = ex.join;
+
+        const equityNum = document.getElementById("equity-num");
+        const equityTotal = document.getElementById("equity-total");
+        if (equityNum) equityNum.firstChild.textContent = ex.privateCount + " ";
+        if (equityTotal)
+          equityTotal.firstChild.textContent = ex.totalCount + " ";
+
+        // About
+        const aboutTitle = document.querySelector("#About h2");
+        const aboutP = document.querySelector("#About p");
+        if (aboutTitle) aboutTitle.innerText = t.aboutTitle;
+        if (aboutP) aboutP.innerText = t.aboutDesc;
+
+        // HowToBuy
+        const howTitle = document.querySelector("#HowToBuy .title h2");
+        if (howTitle) howTitle.innerText = t.howTitle;
+        const howStepTitles = document.querySelectorAll(".howtobuy h3");
+        const howStepTexts = document.querySelectorAll(".howtobuy p");
+        if (howStepTitles.length >= 3) {
+          howStepTitles[0].innerText = t.howStep1Title;
+          howStepTitles[1].innerText = t.howStep2Title;
+          howStepTitles[2].innerText = t.howStep3Title;
+          howStepTexts[0].innerText = t.howStep1Text;
+          howStepTexts[1].innerText = t.howStep2Text;
+          howStepTexts[2].innerText = t.howStep3Text;
+        }
+
+        // FAQ
+        const faqTitle = document.querySelector("#Faq h2");
+        const faqSub = document.querySelector("#Faq h3");
+        if (faqTitle) faqTitle.innerText = t.faqMainTitle;
+        if (faqSub) faqSub.innerText = t.faqSubTitle;
+
+        const faqQs = document.querySelectorAll("#Faq .accordion-button");
+        const faqAs = document.querySelectorAll("#Faq .accordion-body p");
+        if (faqQs.length >= 4) {
+          faqQs[0].innerText = t.faqQ1;
+          faqQs[1].innerText = t.faqQ2;
+          faqQs[2].innerText = t.faqQ3;
+          faqQs[3].innerText = t.faqQ4;
+          faqAs[0].innerText = t.faqA1;
+          faqAs[1].innerText = t.faqA2;
+          faqAs[2].innerText = t.faqA3;
+          faqAs[3].innerText = t.faqA4;
+        }
+
+        // Footer
+        const footerH1 = document.querySelector(".footer-wrap .h1");
+        if (footerH1) footerH1.innerText = t.footerSubscribe;
+        const footerInput = document.querySelector(".footer-wrap input");
+        if (footerInput) footerInput.placeholder = t.footerPlaceholder;
+        const footerSubmit = document.querySelector(".footer-wrap button");
+        if (footerSubmit) footerSubmit.innerText = t.footerSubmit;
+        const footerFollow = document.querySelectorAll(".footer-wrap .h1")[1];
+        if (footerFollow) footerFollow.innerText = t.footerFollow;
+      }
+
+      function changeLanguage() {
+        currentLang = currentLang === "zh" ? "en" : "zh";
+        applyLanguage(currentLang);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        applyLanguage(currentLang);
+      });
+    </script>
+    <script>
+      function relocateLanguageButton() {
+        const languageBtn = document.querySelector(".language");
+        const navList = document.querySelector("#navbar-main");
+        const headerRight = document.querySelector("header div:last-child"); // 原右上角容器
+
+        if (window.innerWidth <= 768) {
+          // 移动到菜单底部
+          if (navList && !navList.contains(languageBtn)) {
+            const li = document.createElement("li");
+            li.appendChild(languageBtn);
+            li.style.marginLeft = "-1rem";
+            li.style.marginTop = "10px";
+            navList.appendChild(li);
+          }
+          languageBtn.style.display = "inline-block";
+        } else {
+          // 💻 移回右上角
+          if (headerRight && !headerRight.contains(languageBtn)) {
+            headerRight.appendChild(languageBtn);
+          }
+          li.style.marginLeft = "0";
+          li.style.marginTop = "0";
+          languageBtn.style.display = "block";
+        }
+      }
+
+      // 页面加载时执行
+      document.addEventListener("DOMContentLoaded", relocateLanguageButton);
+      // 浏览器尺寸变化时执行
+      window.addEventListener("resize", relocateLanguageButton);
+    </script>
+  </body>
+</html>

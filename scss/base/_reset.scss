@@ -1,0 +1,48 @@
+
+* {
+    outline: none;
+    padding: 0;
+
+    &::after {
+        margin : 0;
+        padding: 0;
+    }
+
+    &::before {
+        margin : 0;
+        padding: 0;
+    }
+}
+
+body {
+    line-height: 1.2;
+    // cursor: url(../assets/images/cursor.png), auto;
+    font-family: 'ConcertOne';
+    
+    &.fixed {
+        overflow: hidden;
+        position: fixed;
+    } 
+    &.loading {
+        overflow: hidden;
+    }
+    &::-webkit-scrollbar {
+        width: 0px;
+    } 
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #111;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

@@ -1,0 +1,24 @@
+.footer {
+    position: relative;
+    .footer-wrap {
+        position: relative;
+        z-index: 1;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        background-position: center top;
+        background-size: cover;
+        top:0px;
+        height: 40px;
+        left: 0;
+        width: 100%;
+        background-image: url(../assets/images/faq-bg-1.png);
+        z-index: 2;
+    }
+    &.style-2 {
+        &:before {
+            background-image: url(../assets/images/footer-vector.png);
+        }
+    }
+}

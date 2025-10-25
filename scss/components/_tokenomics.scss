@@ -1,0 +1,88 @@
+.tokenomics-container {
+    position: relative;
+    .tokenomics-wrap {
+        position: relative;
+        z-index: 2;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        background-position: center top;
+        background-size: cover;
+        top:-33px;
+        height: 40px;
+        left: 0;
+        width: 100%;
+        background-image: url(../assets/images/token-bg-1.png);
+        z-index: 1;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        background-position: center top;
+        background-size: cover;
+        bottom:-33px;
+        height: 40px;
+        left: 0;
+        width: 100%;
+        background-image: url(../assets/images/token-bg-2.png);
+        z-index: 1;
+    }
+    .tokenomics-number {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        @include media-breakpoint-down(lg) {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        @include media-breakpoint-down(md) {
+            margin-top: 0%;
+            margin-bottom: 0%;
+        }
+    }
+    
+    .number-count {
+        p {
+            font-size: 20px;
+            margin-bottom: 0;
+            @include media-breakpoint-down(md) {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.progress {
+    background-color: #0E1525;
+    // border:1px #000 solid;
+    height: 18px;
+    .progress-bar {
+        background-color: #1358FD;
+        border-radius: 5px;
+        // background-image: url(../assets/images/progress-bar.png);
+        background-repeat: repeat-x;
+        background-size: auto;
+    }
+}
+
+.simply-section {
+    div {
+        display: flex;
+        flex-direction: column;
+        .simply-amount {
+            font-size: calc(1.6rem + 1vw);
+            line-height: 1;
+            color:#1358FD;
+        }
+        .simply-word {
+            line-height: 1;
+            font-size: 16px;
+        }
+    }
+}
+.w-lg-75 {
+    width: 75%;
+    @include media-breakpoint-down(lg) {
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,7 @@
+.demo {
+	position: relative;
+	z-index: 5;
+}
+.demo img {
+	height: 320px;
+}

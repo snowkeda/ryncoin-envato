@@ -1,0 +1,58 @@
+@media (max-width: 991.98px) {
+	
+	.no-h5{
+		display: none !important;
+	}
+	.shoushu{
+		text-align: center;
+	}
+	.banner-h1{
+		display: inline-block;
+		margin: 0 auto;
+	}
+	.banner-h1::after{ 
+		content: "";
+		position: absolute;
+		/* width: 50%; */
+		height: 20px;
+		background-color: #1358FD;
+		left: 50%;
+		transform: translate(-50%, 0%);
+		bottom: 0;
+	}
+	#mycountdown {
+		padding-right: 10px !important;
+		padding-left: 10px !important;
+	}
+	.simply-section{
+		padding: 1rem 0 !important;
+	}
+	.seahorse3{
+		right: 10px !important;
+		bottom: -50px !important;
+	}
+	.seahorse1{
+		display: none;
+	}
+	.earth {
+		display: none;
+	}
+	.group-box{
+		padding: 30px 10px;
+		gap: 10px;
+	}
+	.exchange-right{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+	.exchange-hm{
+		width: 100%;
+	}
+	.progress-line{
+		display: none;
+	}
+	.language{
+		display: block !important;
+	}
+}

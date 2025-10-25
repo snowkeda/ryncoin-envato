@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <title>Ryncoin - HTML MEME coin Template</title>
+    <meta name="description" content="Bootstrap 5 Based HTML Template">
+    <meta name="keywords" content="bootstrap 5, pwa, mobile template, cordova, phonegap, mobile, html">
+    <link rel="icon" type="image/ico" href="assets/images/favicon.ico" sizes="48x48">
+    
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="assets/images/icons/72x72.png">
+    <link rel="apple-touch-icon" href="assets/images/icons/96x96.png">
+    <link rel="apple-touch-icon" href="assets/images/icons/128x128.png">
+    <link rel="apple-touch-icon" href="assets/images/icons/144x144.png">
+    <link rel="apple-touch-icon" href="assets/images/icons/152x152.png">
+    <link rel="apple-touch-icon" href="assets/images/icons/196x196.png">
+    <link rel="apple-touch-icon" href="assets/images/icons/512x512.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#db4938">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="vendor/glightbox/glightbox.min.css">
+</head>
+
+<body>
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="circle one"></div>
+            <div class="circle two"></div>
+            <div class="circle three"></div>
+        </div>
+    </div>
+    <div class="main-content position-relative overflow-hidden">
+        <!-- header -->
+        <header class="header-container style2 bg-black nav-down">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light border-0">
+                    <a class="navbar-brand light-logo" href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+                    <button class="navbar-toggler px-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0" id="navbar-main">
+                            <li class="nav-item menu-item-has-children">
+                                <a class="nav-link text-white mega-menu" href="#">Home</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="home-1.html">Home 1</a></li>
+                                    <li class="menu-item"><a href="home-2.html">Home 2</a></li>
+                                    <li class="menu-item"><a href="home-3.html">Home 3</a></li>
+                                    <li class="menu-item"><a href="home-4.html">Home 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#About">About</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#HowToBuy">How To Buy</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#Tokenomics">Tokenomics</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#Roadmap">Roadmap</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#Faq">Faq</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#Contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <a href="#Exchange" class="btn bg-theme-pink border border-black text-black d-none d-lg-flex px-4">Exchange</a>
+                </nav>
+            </div>
+        </header>
+        <!-- header -->
+        <!-- banner -->
+        <div class="banner-container bg-theme-cyan2 position-relative">
+            <div class="container position-relative h-100">
+                <div class="banner-content h-100">
+                    <div class="row justify-content-between h-100">
+                        <div class="col-lg-6 col-md-7 h-100 d-flex align-items-center">
+                            <div class="d-flex flex-column py-5">
+                                <h1 class="display5-size ls-n8 lh-5 theme-text-stork text-white mb-4">Get the Best Next Wallet token of 2025 Now!</h1>
+                                <p class="fs-18 lh-28 text-black mb-4">HEMP Toke was created on ETH to revolutionize the hemp industry leveraging the power of blockchain and community-driven innovation.</p>
+                                <form class="p-2 bg-gray-900 rounded-3 mt-3 w-lg-75">
+                                    <div class="row ">
+                                        <div class="col-8 d-flex align-items-center">
+                                            <span id="copyText" class="text-white fs-16 ps-sm-3">343G3h43hk235h2jh235h45443f</span>
+                                        </div>
+                                        <div class="col-4">
+                                            <button class="btn bg-theme-cyan border border-black text-black w-100 copy-btn" id="copyButton" onclick="copyText()">Copy</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-lg-6 d-none d-md-flex d-lg-flex d-xl-flex d-xxl-flex d-xxxl-flex align-items-center h-100">
+                            <img src="assets/images/banner-bg-2.svg" alt="banner" class="w-100 pt-5 position-relative z-10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grass"><img src="assets/images/grass.png" alt="grass"></div>
+        </div>
+        <!-- banner -->
+        <!-- about -->
+        <div class="about-container-three position-relative" id="About">
+            <div class="element-1 rellax" data-rellax-speed="-2"><img src="assets/images/element.svg" alt="element"></div>
+            <div class="about-wrap py-lg-4 bg-theme-darkgreen">
+                <div class="container py-sm-5">
+                    <div class="row justify-content-between">
+                        <div class="row gy-4 gx-4">
+                            <div class="col-lg-6 px-lg-5">
+                                <h2 class="display4-size ls-n5 theme-text-stork text-white mb-4 lh-5">We bring together a vibrant with community of invest advocates to champion</h2>
+                                <div class="d-flex flex-row justify-content-between">
+                                    <p class="mb-0 text-white fs-18 lh-28">Listing price:&nbsp;$0.36</p>
+                                    <p class="mb-0 text-white fs-18 lh-28">Deal price:&nbsp;$4.65</p>
+                                </div>
+                                <div class="d-flex flex-column mt-3">
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 px-xl-5">
+                                <div class="p-4 text-center shadow border border-black bg-white rounded-3 text-black">
+                                    <h3 class="display1-size mb-0">Countdown Price Increase</h3>
+                                    <div class="d-flex flex-row gap-sm-5 gap-4 justify-content-center my-3" id="mycountdown"></div>
+                                    <h4 class="fs-18 ls-n2 mt-0">creating a greener future for all.</h4>
+                                    <div class="px-md-5 mb-3">
+                                        <div class="row gx-3 gy-3 my-3">
+                                            <div class="col-4">
+                                                <a href="#" class="btn bg-white border border-black shadow text-black w-100 d-flex flex-row gap-2 align-items-center ps-2"><img src="assets/images/icon-svg.svg" alt="coin" width="25" height="25">BTC</a>
+                                            </div>
+                                            <div class="col-4">
+                                                <a href="#" class="btn bg-white border border-black shadow text-black w-100 d-flex flex-row gap-2 align-items-center ps-2"><img src="assets/images/icon-svg.svg" alt="coin" width="25" height="25">ETH</a>
+                                            </div>
+                                            <div class="col-4">
+                                                <a href="#" class="btn bg-white border border-black shadow text-black w-100 d-flex flex-row gap-2 align-items-center ps-2"><img src="assets/images/icon-svg.svg" alt="coin" width="25" height="25">LTC</a>
+                                            </div>
+                                        </div>
+                                        <div class="row gx-3 gy-3 mb-3">
+                                            <div class="col">
+                                                <div class="input-group shadow border border-black rounded-2">
+                                                    <input type="number" class="form-control border-0 shadow-none fs-17 lh-1 pe-0" aria-label="btc" value="2.4" id="btcInput">
+                                                    <span class="input-group-text bg-transparent border-0"><img src="assets/images/icon-svg.svg" alt="coin" width="20" height="20"></span>
+                                                </div>
+                                                <!-- <input type="text" class="form-control fs-18" value="2.4"> -->
+                                            </div>
+                                            <div class="col">
+                                                <div class="input-group shadow border border-black rounded-2">
+                                                    <input type="number" class="form-control border-0 shadow-none fs-17 lh-1 pe-0" aria-label="ltc" value="4435.4" id="ltcInput" readonly="">
+                                                    <span class="input-group-text bg-transparent border-0"><img src="assets/images/icon-svg.svg" alt="coin" width="20" height="20"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn bg-theme-cyan border border-black shadow text-black w-100"><span class="px-3">Exchange</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <!-- about -->    
+        <!-- countdown -->
+        <div class="countdown-container py-5 bg-theme-cyan position-relative" id="Exchange">
+            <div class="element-2 rellax" data-rellax-speed="-2"><img src="assets/images/element.svg" alt="element"></div>
+            <div class="container py-lg-5">
+                <div class="row justify-content-between">
+                    <div class="col-lg-5 col-md-6 d-flex h-100 align-items-center my-auto">
+                        <img src="assets/images/about-image.svg" alt="about" class="about-image">
+                    </div>
+                    <div class="col-lg-6 col-md-6 pe-lg-5 py-5">
+                        <h2 class="display4-size ls-n5 theme-text-stork text-white mb-4 lh-5">About Meme Coin</h2>
+                        <p class="fs-18 lh-28 text-black mb-4">Ryncoin is a revolutionary meme-powered cryptocurrency combining humor, community, and real utility. With a fair launch, deflationary tokenomics, and viral potential, Ryncoin aims to be the next big thing in meme culture. Join the movement, HODL strong, and let’s moon together!</p>
+                        <p class="fs-18 lh-28 text-black mb-4">we bring together a vibrant community of investors andadvocates to champion the potential of hemp as a solution for environmental and economicchallenges, creating a greener future for all.</p>
+                        <a href="#Contact" class="btn bg-white border border-black shadow text-black px-4"><span class="px-3">Contact</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-12" id="HowToBuy">
+                    <div class="d-flex justify-content-center pb-5">
+                        <h2 class="display4-size ls-n5 theme-text-stork text-white py-lg-5 lh-5">How to Buy</h2>
+                    </div>
+                </div>
+                <div class="row gx-4 gy-5">
+                    <div class="col-lg-4">
+                        <div
+                            class="howtobuy shadow p-4 border border-black pt-5 rounded-3 bg-theme-yellow text-black text-center position-relative">
+                            <span
+                                class="rounded-pill w-6 h-6 position-absolute top-0 start-50 translate-middle display1-size bg-black text-white d-flex align-items-center text-center justify-content-center">1</span>
+                            <h3 class="display1-size mb-3 mt-0">Connect Your Nest</h3>
+                            <p class="fs-18 lh-28 mb-2">Make sure your wallet is stocked with ETH, BNB, or USDT to swap for
+                                $FLOCK. If your nest is bare, top it up or use the card option to for takeoff.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div
+                            class="howtobuy shadow p-4 border border-black pt-5 rounded-3 bg-theme-pink text-black text-center position-relative">
+                            <span
+                                class="rounded-pill w-6 h-6 position-absolute top-0 start-50 translate-middle display1-size bg-black text-white d-flex align-items-center text-center justify-content-center">2</span>
+                            <h3 class="display1-size mb-3 mt-0">Feather Your Wallet</h3>
+                            <p class="fs-18 lh-28 mb-2">Make sure your wallet is stocked with ETH, BNB, or USDT to swap for
+                                $FLOCK. If your nest is bare, top it up or use the card option to for takeoff.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div
+                            class="howtobuy shadow p-4 border border-black pt-5 rounded-3 bg-theme-green text-black text-center position-relative">
+                            <span
+                                class="rounded-pill w-6 h-6 position-absolute top-0 start-50 translate-middle display1-size bg-black text-white d-flex align-items-center text-center justify-content-center">3</span>
+                            <h3 class="display1-size mb-3 mt-0">Connect Your Nest</h3>
+                            <p class="fs-18 lh-28 mb-2">Make sure your wallet is stocked with ETH, BNB, or USDT to swap for
+                                $FLOCK. If your nest is bare, top it up or use the card option to for takeoff.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- countdown -->
+        <!-- tokenomics -->
+        <div class="tokenomics-container" id="Tokenomics">
+            <div class="element-3 rellax" data-rellax-speed="-2"><img src="assets/images/element.svg" alt="element"></div>
+            <div class="element-4 rellax" data-rellax-speed="-1"><img src="assets/images/element.svg" alt="element"></div>
+            <div class="tokenomics-wrap py-5 bg-theme-green">
+                <div class="container py-lg-4">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-12">
+                            <div class="d-flex flex-column justify-content-center text-center">
+                                <h2 class="display4-size ls-n5 theme-text-stork text-white lh-5">Tokenomics</h2>
+                                <h3 class="display1-size mb-3 mt-0 text-black lh-1">20% Liquidity (1.8 billion tokens)</h3>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 tokenomics-number d-none d-md-block d-lg-block d-xl-block d-xxl-block mb-5">
+                            <div class="d-flex flex-column align-items-end h-100">
+                                <div class="number-count d-flex flex-row gap-3 justify-content-end">
+                                    <span class="display4-size text-cyan lh-3">22<b class="display1-size">%</b></span>
+                                    <p class="text-black lh-6">Early <br> Contributes</p>
+                                </div>
+                                <div class="number-count d-flex flex-row gap-3 justify-content-start my-auto mx-auto">
+                                    <span class="display4-size text-orange lh-3">4<b class="display1-size">%</b></span>
+                                    <p class="text-black lh-6">Airdrop <br> Contributes</p>
+                                </div>
+                                <div class="number-count d-flex flex-row gap-3 justify-content-end mb-5">
+                                    <span class="display4-size text-pink lh-3">11<b class="display1-size">%</b></span>
+                                    <p class="text-black lh-6">Research <br> Marketing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 px-0 mt-5">
+                            <canvas id="myPieChart" style="height: 500px;"></canvas>
+                        </div>
+                        <div class="col-sm-3 tokenomics-number d-none d-md-block d-lg-block d-xl-block d-xxl-block mb-5">
+                            <div class="d-flex flex-column align-items-end h-100">
+                                <div class="number-count d-flex flex-row gap-3 justify-content-start me-auto">
+                                    <span class="display4-size text-info lh-3">33<b class="display1-size">%</b></span>
+                                    <p class="text-black lh-6">Presale <br> Liquidity </p>
+                                </div>
+                                <div class="number-count d-flex flex-row gap-3 justify-content-start my-auto mx-auto">
+                                    <span class="display4-size text-secondary lh-3">15<b class="display1-size">%</b></span>
+                                    <p class="text-black lh-6">Burn <br>Liquidity</p>
+                                </div>
+                                <div class="number-count d-flex flex-row gap-3 justify-content-end mb-5 me-auto">
+                                    <span class="display4-size text-pink lh-3">12<b class="display1-size">%</b></span>
+                                    <p class="text-black lh-6">Angel <br>Investors</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex d-md-none d-lg-none d-xl-none d-xxl-none mt-3">
+                            <div class="row gy-4 ">
+                                <div class="col-6">
+                                    <div class="number-count d-flex flex-row gap-3 justify-content-center">
+                                        <span class="display4-size text-cyan lh-3">22<b class="display1-size">%</b></span>
+                                        <p class="text-black lh-6">Early <br> Contributes</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="number-count d-flex flex-row gap-3 justify-content-center">
+                                        <span class="display4-size text-orange lh-3">4<b class="display1-size">%</b></span>
+                                        <p class="text-black lh-6">Airdrop <br> Contributes</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="number-count d-flex flex-row gap-3 justify-content-center">
+                                        <span class="display4-size text-pink lh-3">11<b class="display1-size">%</b></span>
+                                        <p class="text-black lh-6">Research <br> Marketing</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="number-count d-flex flex-row gap-3 justify-content-center">
+                                        <span class="display4-size text-info lh-3">33<b class="display1-size">%</b></span>
+                                        <p class="text-black lh-6">Presale <br> Liquidity </p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="number-count d-flex flex-row gap-3 justify-content-center">
+                                        <span class="display4-size text-secondary lh-3">15<b class="display1-size">%</b></span>
+                                        <p class="text-black lh-6">Burn <br>Liquidity</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="number-count d-flex flex-row gap-3 justify-content-center">
+                                        <span class="display4-size text-pink lh-3">12<b class="display1-size">%</b></span>
+                                        <p class="text-black lh-6">Angel <br>Investors</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gy-4 gx-4 justify-content-center" id="Gallery">
+                        <div class="col-sm-12 py-5">
+                            <div class="d-flex flex-column justify-content-center text-center">
+                                <h2 class="display4-size ls-n5 theme-text-stork text-white lh-5">Our Gallery</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="row gy-3 gx-3">
+                                <div class="col-md-4">
+                                    <div class="d-flex flex-column gap-3">
+                                        <a href="assets/images/galley.svg" class="glightbox w-100 rounded-2 bg-gray-900 object-fit-container py-md-4"><img src="assets/images/galley.svg" alt="image" class="w-100"></a>
+                                        <a href="assets/images/galley.svg" class="glightbox w-100 rounded-2 bg-gray-900 object-fit-container py-md-5"><img src="assets/images/galley.svg" alt="image" class="w-100"></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex flex-column gap-3">
+                                        <a href="assets/images/galley.svg" class="glightbox w-100 rounded-2 bg-gray-900 object-fit-container"><img src="assets/images/galley.svg" alt="image" class="w-100"></a>
+                                        <a href="assets/images/galley.svg" class="glightbox w-100 rounded-2 bg-gray-900 object-fit-container"><img src="assets/images/galley.svg" alt="image" class="w-100"></a>                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex flex-column gap-3">
+                                        <a href="assets/images/galley.svg" class="glightbox w-100 rounded-2 bg-gray-900 object-fit-container"><img src="assets/images/galley.svg" alt="image" class="w-100"></a>
+                                        <a href="assets/images/galley.svg" class="glightbox w-100 rounded-2 bg-gray-900 object-fit-container py-md-5"><img src="assets/images/galley.svg" alt="image" class="w-100"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- tokenomics -->
+        <!-- faq and contact -->
+        <div class="faq-container pt-5 pb-4 bg-theme-cyan" id="Faq">
+            <div class="container py-lg-5">
+                <div class="row justify-content-center">
+                    <div class="col-sm-12">
+                        <div class="d-flex flex-column justify-content-center text-center">
+                            <h2 class="display4-size ls-n5 theme-text-stork text-white lh-5">Got Questions?</h2>
+                            <h3 class="display1-size mb-3 mt-0 text-black lh-1"> We've Got Answers!</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 mt-5">
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        What is ryncoin coin?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <p class="fs-17 lh-28 mb-2">This means there is no one leader, just a group of likeminded people working together to make great, and earning crazy rewards for their participation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                        Can I Earn Rewards During Presale?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <p class="fs-17 lh-28 mb-2">A staking horizon, presale stakers can sit back and enjoy passive rewards for their presale participation, while also utilizing their vote in order to vote to earn!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"  data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                        What Makes Ryncoin So Unique?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <p class="fs-17 lh-28 mb-2">No meme coin has rewarded its community for casting their votes on the blockchain. holders are blazing a new trail in the space.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"  data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                        How Do I Buy Presale?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <p class="fs-17 lh-28 mb-2">I ditched the bamboo forest for the concrete jungle of New York to become the first panda in the meme elite, alongside Dogecoin, Shiba, Pepe, and all those cats!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- faq and contact -->
+        <!-- footer -->
+        <div class="footer" id="Contact">
+            <div class="footer-wrap py-5 bg-black">
+                <div class="container pt-lg-5 pb-lg-4 my-3">
+                    <div class="row gy-4 gx-4">
+                        <div class="col-lg-6 text-white">
+                            <span class="h1">Subscribe Our Newsletter</span>
+                            <form class="p-2 bg-gray-800 rounded-3 mt-3 w-lg-75">
+                                <div class="row ">
+                                    <div class="col-8">
+                                        <input type="text" class="form-control bg-transparent text-white fs-16 border-0" placeholder="Enter Email Address.">
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="btn bg-theme-cyan border border-black text-black w-100">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-3 text-white">
+                            <span class="h1">Contact</span>
+                            <p class="lh-24 fs-16 mb-0 mt-3">Sunrise Tower, 15 Oceanview Avenue, Blue Bay City, Coastal State, 45890</p>
+                        </div>
+                        <div class="col-lg-3 text-white">
+                            <span class="h1">Follow</span>
+                            <ul class="navbar-nav mt-4 d-flex flex-row gap-3">
+                                <li><a href="#" aria-label="mastodon"><i class="bi-mastodon text-white display1-size"></i></a></li>
+                                <li><a href="#" aria-label="telegram"><i class="bi-telegram text-white display1-size"></i></a></li>
+                                <li><a href="#" aria-label="twitter"><i class="bi-twitter-x text-white display1-size"></i></a></li>
+                                <li><a href="#" aria-label="instagram"><i class="bi-instagram text-white display1-size"></i></a></li>
+                                <li><a href="#" aria-label="twitch"><i class="bi-twitch text-white display1-size"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+    </div>
+
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        simplyCountdown("#mycountdown", {
+            year: 2025,
+            month: 4,
+            day: 25,
+            zeroPad: true
+        });
+    </script>
+
+    <script>
+
+        function copyText() {
+            event.preventDefault(); 
+
+            const text = document.getElementById("copyText").innerText;
+            const button = document.getElementById("copyButton");
+            
+            navigator.clipboard.writeText(text).then(() => {
+                button.innerText = "Copied";
+                button.style.background = "#81c784"; // Change color to green
+                setTimeout(() => {
+                    button.innerText = "Copy";
+                    button.style.background = "#4fc3f7"; // Reset color
+                }, 2000);
+            }).catch(err => {
+                console.error("Failed to copy:", err);
+            });
+        }
+
+        document.getElementById('btcInput').addEventListener('input', function () {
+            let btcValue = parseFloat(this.value) || 0;
+            let conversionRate = 1848.083333333333;
+            document.getElementById('ltcInput').value = (btcValue * conversionRate).toFixed(2);
+        });
+
+        // Get the canvas element
+        const ctx = document.getElementById('myPieChart').getContext('2d');
+
+        // Data for the pie chart
+        const data = {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Black'],
+            datasets: [{
+                label: 'Colors Distribution',
+                data: [15, 30, 15, 21, 27, 21], // Values for each segment
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.7)',
+                    'rgba(54, 162, 235, 0.7)',
+                    'rgba(255, 206, 86, 0.7)',
+                    'rgba(75, 192, 192, 0.7)',
+                    'rgba(153, 102, 255, 0.7)',
+                    '#10d876'
+                ],
+                borderColor: 'black'
+            }]
+        };
+
+        // Configuration object for the chart
+        const config = {
+            type: 'doughnut', // Type of chart
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: "70%",
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                },
+            }
+        };
+
+        // Create and render the chart
+        new Chart(ctx, config);
+        
+        // Accepts any class name
+        var rellax = new Rellax('.rellax');
+    </script>
+    
+    <!-- GLightbox JavaScript -->
+    <script src="vendor/glightbox/glightbox.min.js"></script>
+    <script>
+        // Initialize GLightbox
+        const lightbox = GLightbox({
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true,
+        });
+    </script>
+
+</body>
+
+</html>

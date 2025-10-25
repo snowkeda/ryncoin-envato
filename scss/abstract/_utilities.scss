@@ -1,0 +1,268 @@
+$gap: 1rem;
+$gaps: (
+    0: 0,
+    1: $gap * .25,
+    2: $gap * .5,
+    3: $gap,
+    4: $gap * 1.5,
+    5: $gap * 3,
+    6: $gap * 3.5,
+    7: $gap * 4.25,
+    8: $gap * 5,
+    9: $gap * 6.25,
+    10: $gap * 7,
+    11: $gap * 10,
+    12: $gap * 14,
+    13: $gap * 17,
+    14: $gap * 20,
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+);
+
+$ngap: -1rem;
+$ngaps: (
+    0: 0,
+    1: $ngap * .25,
+    2: $ngap * .5,
+    3: $ngap,
+    4: $ngap * 1.5,
+    5: $ngap * 3,
+    6: $ngap * 3.5,
+    7: $ngap * 4.25,
+    8: $ngap * 5,
+    9: $ngap * 6.25,
+    10: $ngap * 7,
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+);
+
+$utilities: () !default;
+$utilities: (
+    
+    "translate-middle": (
+        property: transform,
+        class: translate-middle,
+        responsive: true,
+        values: (
+            null: translate(-50%, -50%),
+            x: translateX(-50%),
+            y: translateY(-50%),
+        )
+    ),
+    "fontsize": (
+        property: font-size,
+        class: fs,
+        values: (
+            10: 10px,
+            11: 11px,
+            12: 12px,
+            13: 13px,
+            14: 14px,
+            15: 15px,
+            16: 16px,
+            17: 17px,
+            18: 18px,
+            19: 19px,
+            20: 20px,
+            22: 22px,
+            24: 24px,
+            26: 26px,
+            30: 30px,
+            34: 34px,
+            38: 38px,
+            40: 40px,
+        )
+    ),
+    "maxwidth": (
+        property: max-width,
+        class: mw,
+        responsive:true,
+        values: (
+            900: 900px,
+            1000: 1000px,
+            1100: 1100px,
+            1200: 1200px,
+            800: 800px,
+            600: 600px,
+            350: 350px,
+        )
+    ),
+    "minwidth": (
+        property: min-width,
+        class: minw,
+        responsive:true,
+        values: (
+            100: 100px,
+            200: 200px,
+            250: 250px,
+            300: 300px,
+            400: 400px,
+            500: 500px,
+            600: 600px,
+        )
+    ),
+    "letterspacing": (
+        property: letter-spacing,
+        class: ls,
+        values: (
+            0: 0px,
+            1: 0.2px,
+            2: 0.4px,
+            3: 0.6px,
+            4: 0.8px,
+            5: 1px,
+            n1: -0.2px,
+            n2: -0.4px,
+            n3: -0.6px,
+            n4: -0.8px,
+            n5: -1px,
+            n6: -1.5px,
+            n7: -2px,
+            n8: -2.5px,
+        )
+    ),
+    "lineheight": (
+        property: line-height,
+        class: lh,
+        values: (
+            // 1: 0.2,
+            2: 0.4,
+            3: 0.6,
+            4: 0.8,
+            5: 1,
+            6: 1.2,
+            7: 1.4,
+            8: 1.6,
+            9: 1.8,
+            10: 10px,
+            12: 12px,
+            14: 14px,
+            16: 16px,
+            18: 18px,
+            20: 20px,
+            22: 22px,
+            24: 24px,
+            26: 26px,
+            28: 28px,
+            32: 32px,
+        )
+    ),
+    "link-opacity": (
+        css-var: true,
+        class: link-opacity,
+        state: hover,
+        values: (
+            10: .1,
+            25: .25,
+            50: .5,
+            75: .75,
+            100: 1
+        )
+    ),
+    "link-offset": (
+        property: text-underline-offset,
+        class: link-offset,
+        state: hover,
+        values: (
+            1: .125em,
+            2: .25em,
+            3: .375em,
+        )
+    ),
+    "top": (
+        property: top,
+        class: top,
+        values: map-merge($gaps, (auto: auto))
+    ),
+    "bottom": (
+        property: bottom,
+        class: bottom,
+        values: map-merge($gaps, (auto: auto))
+    ),
+    "top-n": (
+        property: top,
+        responsive:true,
+        class: top-n,
+        values: map-merge($ngaps, (auto: auto))
+    ),
+    "bottom-n": (
+        property: bottom,
+        class: bottom-n,
+        values: map-merge($ngaps, (auto: auto))
+    ),
+    "left": (
+        property: left,
+        class: start,
+        values: map-merge($gaps, (auto: auto))
+    ),
+    "left-n": (
+        property: left,
+        class: start-n,
+        values: map-merge($ngaps, (auto: auto))
+    ),
+    "right": (
+        property: right,
+        class: end,
+        values: map-merge($gaps, (auto: auto))
+    ),
+    "width": (
+        property: width,
+        class: w,
+        values: map-merge($gaps, (auto: auto,100: 100%))
+    ),
+    "height": (
+        property: height,
+        class: h,
+        values: map-merge($gaps, (auto: auto,100: 100%))
+    ),
+    "z-index": (
+        property: z-index,
+        class: z,
+        values: (
+            0:0,
+            10: 10,
+            20: 20,
+            30: 30,
+            40: 40,
+            50: 50,
+            60: 60,
+            70: 70,
+            80: 80,
+            90: 90,
+            100: 100,
+        )
+    ),
+    "shadow": (
+        property: box-shadow,
+        responsive: true,
+        class: shadow,
+        values: (
+            xs: 0 .5rem 1rem rgba($black, .05),
+            sm: 0 .125rem .25rem rgba($black, .075),
+            lg: 0 1rem 3rem rgba($black, .175),
+            none: none,
+        )
+    ),
+    "cursor": (
+        property: cursor,
+        class: cursor,
+        values: (
+            pointer: pointer,
+            grab:grab,
+            help:help
+        )
+    ),
+    "border-s": (
+        property: border-left,
+        responsive:true,
+        class: border-s,
+        values: (
+            0: 0,
+        )
+    ),
+);
+
