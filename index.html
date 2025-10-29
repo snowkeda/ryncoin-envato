@@ -950,7 +950,7 @@
       var address, contractAbi, usdtAbi;
       // const contractAddress = "0xf1D75949710D6223F8BA1425F9D84D024eC05C1c";
       const contractAddress = "0x3da1a5a4eef71df286ca27811d438e8752f49608";
-      const hmbAddress = "0xb1fB9F8c9Ce94497De0569be71320cbF6E424Ccd";
+      const hmbAddress = "0xe67d1b4C67eb97751Bb0323A7b2006c77cCBDA87";
       //   const contractAddress = "0xB109e40AD4bd612784522e06c931a0CB84384150";
       //   const hmbAddress = "0xC25717B57ab14201F8416C2174e12e01CcB2e2F4";
       const usdtAddress = "0x55d398326f99059fF775485246999027B3197955"; // BSC 主网 USDT 地址
@@ -1077,30 +1077,30 @@
       }
 
       async function getEndtime() {
-        const contract = await init(contractAddress, contractAbi);
-        const phase = await contract.getCurrentPhase();
-        const n = phase.toString();
-        const timeList = await contract.getAllPhases();
-        const t = translations[currentLang];
-        if (+n + 1 > timeList.length) return showPop(t.messages.privateSaleEnded);
-        const info = timeList[n];
-        const temp = info.endTime.toString() * 1000;
-        const year = new Date(temp).getFullYear();
-        const month = new Date(temp).getMonth() + 1;
-        const day = new Date(temp).getDate();
-        simplyCountdown("#mycountdown", {
-          year,
-          month,
-          day,
-          zeroPad: true,
-        });
-        const userInfo = await contract.getUserInfo(address);
-        if (!userInfo.isSpecial) {
-          myPrice = info.price.toString() / 10000;
-          $("#price").text((info.price.toString() / 10000).toFixed(2));
-        } else {
-          myPrice = info.specialPrice.toString() / 10000;
-          $("#price").text((info.specialPrice.toString() / 10000).toFixed(2));
+          const contract = await init(contractAddress, contractAbi);
+          const phase = await contract.getCurrentPhase();
+          const n = phase.toString();
+          const timeList = await contract.getAllPhases();
+          const t = translations[currentLang];
+          if (+n + 1 > timeList.length) return showPop(t.messages.privateSaleEnded);
+          const info = timeList[n];
+          const temp = info.endTime.toString() * 1000;
+          const year = new Date(temp).getFullYear();
+          const month = new Date(temp).getMonth() + 1;
+          const day = new Date(temp).getDate();
+          simplyCountdown("#mycountdown", {
+            year,
+            month,
+            day,
+            zeroPad: true,
+          });
+            const userInfo = await contract.getUserInfo(address);
+            if (!userInfo.isSpecial) {
+              myPrice = info.price.toString() / 10000;
+              $("#price").text((info.price.toString() / 10000).toFixed(2));
+            } else {
+              myPrice = info.specialPrice.toString() / 10000;
+              $("#price").text((info.specialPrice.toString() / 10000).toFixed(2));
         }
       }
 
@@ -1172,41 +1172,54 @@
           setTimeout(() => checkReferrerStatus(), 1000);
         } catch (err) {
           $("#loading").hide();
-          const msg = err?.data?.message || err?.message || t.messages.bindSuccess;
-          showPop(msg);
+          // 尝试解析错误消息，如果无法解析则显示通用错误
+          let errorMsg = t.messages.bindSuccess.replace("成功", "失败").replace("successful", "failed");
+
+          // 检查是否是已知的错误类型
+          const errMessage = err?.data?.message || err?.message || "";
+          if (errMessage.includes("already bound") || errMessage.includes("已绑定")) {
+            errorMsg = currentLang === "zh" ? "该地址已绑定其他邀请人" : "Address already bound to another referrer";
+          } else if (errMessage) {
+            // 如果有具体的错误消息，显示它（但添加提示这是技术错误）
+            errorMsg = currentLang === "zh"
+              ? `绑定失败: ${errMessage}`
+              : `Bind failed: ${errMessage}`;
+          }
+
+          showPop(errorMsg);
         }
       }
 
       async function getBalance() {
-        const contract = await init(contractAddress, contractAbi);
-        const hmbContract = await init(hmbAddress, usdtAbi);
-        const balance = await hmbContract.balanceOf(contractAddress);
-        const bnum = ethers.utils.formatUnits(balance, 18);
+          const contract = await init(contractAddress, contractAbi);
+          const hmbContract = await init(hmbAddress, usdtAbi);
+          const balance = await hmbContract.balanceOf(contractAddress);
+          const bnum = ethers.utils.formatUnits(balance, 18);
         const userInfo = await contract.getUserInfo(address);
-        const start = await contract.VESTING_START_TIME();
-        if (start.toString() * 1000 <= new Date().getTime()) {
-          const drawNum = ethers.utils.formatUnits(userInfo.claimed, 18);
-          const lockedNum = ethers.utils.formatUnits(userInfo.totalHMC, 18);
-          const claimableHMC = ethers.utils.formatUnits(
-            userInfo.claimableHMC,
-            18
-          );
-          const proWidth = +drawNum / lockedNum;
-          $("#equity-num").text(`领取HMC数量：${drawNum} HMC`);
-          $("#equity-total").text(`锁仓数量：${lockedNum} HMC`);
-          $("#await-draw").text(`待领取数量：${claimableHMC} HMC`);
-          $("#progress-bar").css({ width: `${proWidth * 100}%` });
-          $("#exchange")
-            .text("GET HMC")
-            .css({
-              "background-color": +claimableHMC > 0 ? "#0d6efd" : "#222",
-            });
-        } else {
-          const equity = 300000000 - bnum;
-          const proWidth = equity / 300000000;
-          $("#equity-num").text(`私募数量：${equity} HMC`);
-          $("#equity-total").text(`总私募量：300000000 HMC`);
-          $("#progress-bar").css({ width: `${proWidth * 100}%` });
+          const start = await contract.VESTING_START_TIME();
+          if (start.toString() * 1000 <= new Date().getTime()) {
+            const drawNum = ethers.utils.formatUnits(userInfo.claimed, 18);
+            const lockedNum = ethers.utils.formatUnits(userInfo.totalHMC, 18);
+            const claimableHMC = ethers.utils.formatUnits(
+              userInfo.claimableHMC,
+              18
+            );
+            const proWidth = +drawNum / lockedNum;
+            $("#equity-num").text(`领取HMC数量：${drawNum} HMC`);
+            $("#equity-total").text(`锁仓数量：${lockedNum} HMC`);
+            $("#await-draw").text(`待领取数量：${claimableHMC} HMC`);
+            $("#progress-bar").css({ width: `${proWidth * 100}%` });
+            $("#exchange")
+              .text("GET HMC")
+              .css({
+                "background-color": +claimableHMC > 0 ? "#0d6efd" : "#222",
+              });
+          } else {
+            const equity = 300000000 - bnum;
+            const proWidth = equity / 300000000;
+            $("#equity-num").text(`私募数量：${equity} HMC`);
+            $("#equity-total").text(`总私募量：300000000 HMC`);
+            $("#progress-bar").css({ width: `${proWidth * 100}%` });
         }
       }
 
@@ -1243,12 +1256,17 @@
             })
             .catch((error) => {
               $("#loading").hide();
-              showPop(error);
+              const errorMsg = currentLang === "zh"
+                ? `领取失败: ${error?.message || error}`
+                : `Claim failed: ${error?.message || error}`;
+              showPop(errorMsg);
             });
         } catch (err) {
           $("#loading").hide();
-          const msg = err?.data?.message || err?.message;
-          showPop(msg);
+          const errorMsg = currentLang === "zh"
+            ? `领取失败: ${err?.data?.message || err?.message || "未知错误"}`
+            : `Claim failed: ${err?.data?.message || err?.message || "Unknown error"}`;
+          showPop(errorMsg);
         }
       }
 
@@ -1301,8 +1319,11 @@
           }
         } catch (err) {
           $("#loading").hide();
-          const msg = err?.data?.message || err?.message;
-          showPop(msg);
+          const t = translations[currentLang];
+          const errorMsg = currentLang === "zh"
+            ? `授权失败: ${err?.data?.message || err?.message || "未知错误"}`
+            : `Approval failed: ${err?.data?.message || err?.message || "Unknown error"}`;
+          showPop(errorMsg);
         }
       }
 
@@ -1332,8 +1353,10 @@
           ) {
             showPop(t.messages.insufficientBalance);
           } else {
-            const msg = err?.data?.message || err?.message;
-            showPop(msg);
+            const errorMsg = currentLang === "zh"
+              ? `购买失败: ${err?.data?.message || err?.message || "未知错误"}`
+              : `Purchase failed: ${err?.data?.message || err?.message || "Unknown error"}`;
+            showPop(errorMsg);
           }
         }
       }
@@ -1370,8 +1393,10 @@
           $("#loading").hide();
           $("#mask").fadeOut(400);
           $("#paddr").val("");
-          const msg = err?.data?.message || err?.message;
-          showPop(msg);
+          const errorMsg = currentLang === "zh"
+            ? `绑定失败: ${err?.data?.message || err?.message || "未知错误"}`
+            : `Bind failed: ${err?.data?.message || err?.message || "Unknown error"}`;
+          showPop(errorMsg);
         }
       });
 
@@ -1721,6 +1746,9 @@
           : "English";
         localStorage.setItem("lang", lang);
 
+        // 清空当前显示的提示框（如果有）
+        $("#popup").stop(true, true).fadeOut(0);
+
         // 顶部导航
         const nav = document.querySelectorAll("#navbar-main li a");
         if (nav.length >= 7) {
@@ -1917,7 +1945,7 @@
         const headerRight = document.querySelector("header div:last-child"); // 原右上角容器
 
         if (window.innerWidth <= 768) {
-          // 移动到菜单底部
+          // 📱 移动到菜单底部
           if (navList && !navList.contains(languageBtn)) {
             const li = document.createElement("li");
             li.appendChild(languageBtn);
@@ -1929,10 +1957,13 @@
         } else {
           // 💻 移回右上角
           if (headerRight && !headerRight.contains(languageBtn)) {
+            // 如果按钮在 li 中，先从 li 中移除
+            const parentLi = languageBtn.closest("li");
+            if (parentLi && parentLi.parentElement === navList) {
+              parentLi.remove();
+            }
             headerRight.appendChild(languageBtn);
           }
-          li.style.marginLeft = "0";
-          li.style.marginTop = "0";
           languageBtn.style.display = "block";
         }
       }
