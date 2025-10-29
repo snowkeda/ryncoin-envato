@@ -1089,6 +1089,10 @@
           const year = new Date(temp).getFullYear();
           const month = new Date(temp).getMonth() + 1;
           const day = new Date(temp).getDate();
+
+          // 清空旧的倒计时，防止重复渲染
+          $("#mycountdown").empty();
+
           simplyCountdown("#mycountdown", {
             year,
             month,
