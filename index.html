@@ -945,11 +945,12 @@
     <script src="assets/js/jquery.min.js"></script>
     <script>
       var address, contractAbi, usdtAbi;
-      const contractAddress = "0xf1D75949710D6223F8BA1425F9D84D024eC05C1c";
+      // const contractAddress = "0xf1D75949710D6223F8BA1425F9D84D024eC05C1c";
+      const contractAddress = "0x51824aB5f527BA2B90caa25AA3D6BE288b6b8282";
       const hmbAddress = "0xb1fB9F8c9Ce94497De0569be71320cbF6E424Ccd";
       //   const contractAddress = "0xB109e40AD4bd612784522e06c931a0CB84384150";
       //   const hmbAddress = "0xC25717B57ab14201F8416C2174e12e01CcB2e2F4";
-      const usdtAddress = "0xb575796D293f37F112f3694b8ff48D711FE67EC7";
+      const usdtAddress = "0x55d398326f99059fF775485246999027B3197955"; // BSC 主网 USDT 地址
       var myPrice = 0;
       const reg = /^(?:0*\.[0]*[1-9]\d*|[1-9]\d*(?:\.\d*)?)$/;
 
@@ -966,7 +967,7 @@
         try {
           await window.ethereum.request({
             method: "wallet_switchEthereumChain",
-            params: [{ chainId: chainIdHex }], // 例如 '0x1' 是以太坊主网
+            params: [{ chainId: chainIdHex }], // 例如 '0x38' 是 BSC 主网
           });
           console.log("切换成功");
         } catch (switchError) {
@@ -978,14 +979,14 @@
                 params: [
                   {
                     chainId: chainIdHex,
-                    chainName: "Xone",
+                    chainName: "BNB Smart Chain",
                     nativeCurrency: {
-                      name: "XONE Token",
-                      symbol: "XOC",
+                      name: "BNB",
+                      symbol: "BNB",
                       decimals: 18,
                     },
-                    rpcUrls: ["https://rpc.xone.org"], // RPC 地址
-                    blockExplorerUrls: ["https://xonescan.com/"], // 区块浏览器地址
+                    rpcUrls: ["https://bsc-dataseed1.binance.org"], // BSC RPC 地址
+                    blockExplorerUrls: ["https://bscscan.com/"], // BSC 区块浏览器地址
                   },
                 ],
               });
@@ -1366,7 +1367,7 @@
       }
 
       $(async function () {
-        await switchNetwork("0xE89");
+        await switchNetwork("0x38"); // BSC 主网链 ID
         contractAbi = await getAbi("./assets/json/abi.json");
         usdtAbi = await getAbi("./assets/json/usdtAbi.json");
         getWalletAddress(); // 这个会自动调用 checkReferrerStatus
