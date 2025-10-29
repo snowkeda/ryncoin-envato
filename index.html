@@ -324,7 +324,7 @@
                   </div>
                 </div> -->
                 <div class="row gx-3 gy-3 mb-3">
-                  <div class="col-5">
+                  <div class="col-12 col-md-5 ">
                     <div
                       class="input-group border-0 equity"
                       style="display: flex; justify-content: space-between"
@@ -339,16 +339,19 @@
                   <div class="col">
                     <div
                       class="input-group equity"
-                      style="display: flex; justify-content: space-between"
+                      style="display: flex; justify-content: space-between;"
                     >
                       <span class="text-blue quantity-label">私募数量</span>
-                      <input
-                        type="number"
-                        class="border-0 shadow-none lh-1 pe-0 equity text-white"
-                        aria-label="ltc"
-                        id="quantity"
-                        placeholder="请输入您要私募的HMC数量"
-                      />
+                      <div style="display: flex; align-items: center; gap: 5px; flex: 1;">
+                        <input
+                          type="number"
+                          class="border-0 shadow-none lh-1 pe-0 equity text-white"
+                          aria-label="ltc"
+                          id="quantity"
+                          placeholder="您要私募的HMC数量"
+                          />
+                        <span class="text-white-50" style="font-size: 14px;">HMC</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1570,7 +1573,7 @@
             totalCount: "总私募量：",
             privateUnitPrice: "私募单价",
             privateCountLabel: "私募数量",
-            privateInput: "请输入您要私募的HMC数量",
+            privateInput: "您要私募的HMC数量",
             payText: "预计支付：",
             join: "立即参与",
           },

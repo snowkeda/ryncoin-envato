@@ -253,8 +253,8 @@ img:hover {
 
 /* 输入框焦点效果 */
 input:focus, textarea:focus {
-	transition: all 0.3s ease;
-	box-shadow: 0 0 15px rgba(19, 88, 253, 0.5) !important;
+	/* transition: all 0.3s ease;
+	box-shadow: 0 0 15px rgba(19, 88, 253, 0.5) !important; */
 }
 
 /* 导航栏滚动效果 */
