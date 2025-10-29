@@ -341,7 +341,7 @@
                       class="input-group equity"
                       style="display: flex; justify-content: space-between"
                     >
-                      <span class="text-blue">私募单价</span>
+                      <span class="text-blue">私募数量</span>
                       <input
                         type="number"
                         class="border-0 shadow-none lh-1 pe-0 equity text-white"
@@ -1538,6 +1538,7 @@
             privateCount: "私募数量：",
             totalCount: "总私募量：",
             privateUnitPrice: "私募单价",
+            privateCountLabel: "私募数量",
             privateInput: "请输入您要私募的HMC数量",
             payText: "预计支付：",
             join: "立即参与",
@@ -1615,6 +1616,7 @@
             privateCount: "Private Amount:",
             totalCount: "Total Private Volume:",
             privateUnitPrice: "Private Price",
+            privateCountLabel: "Private Amount",
             privateInput: "Enter amount of HMC to purchase",
             payText: "Estimated Payment:",
             join: "Join Now",
@@ -1726,7 +1728,7 @@
         );
         if (privateTexts.length >= 2) {
           privateTexts[0].innerText = ex.privateUnitPrice;
-          privateTexts[1].innerText = ex.privateUnitPrice;
+          privateTexts[1].innerText = ex.privateCountLabel;
         }
 
         const quantityInput = document.getElementById("quantity");
