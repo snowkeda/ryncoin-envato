@@ -298,3 +298,16 @@ input:focus, textarea:focus {
 .delay-4 { animation-delay: 0.4s; }
 .delay-5 { animation-delay: 0.5s; }
 .delay-6 { animation-delay: 0.6s; }
+
+/* 防止移动端输入框放大页面 */
+input, textarea, select {
+	font-size: 16px !important;
+	touch-action: manipulation;
+}
+
+/* iOS Safari 特殊处理 */
+@supports (-webkit-touch-callout: none) {
+	input, textarea, select {
+		font-size: 16px !important;
+	}
+}

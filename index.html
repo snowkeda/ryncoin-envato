@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0, viewport-fit=cover"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
     />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta
@@ -956,8 +956,9 @@
 
       async function switchNetwork(chainIdHex) {
         if (!window.ethereum) {
+          const t = translations[currentLang];
           $("#popup")
-            .text("请安装 MetaMask！")
+            .text(t.messages.installMetaMask)
             .fadeIn(400)
             .delay(2000)
             .fadeOut(400);
@@ -1077,7 +1078,8 @@
         const phase = await contract.getCurrentPhase();
         const n = phase.toString();
         const timeList = await contract.getAllPhases();
-        if (+n + 1 > timeList.length) return showPop("私募已结束");
+        const t = translations[currentLang];
+        if (+n + 1 > timeList.length) return showPop(t.messages.privateSaleEnded);
         const info = timeList[n];
         const temp = info.endTime.toString() * 1000;
         const year = new Date(temp).getFullYear();
@@ -1126,32 +1128,33 @@
       }
 
       async function bindReferrerFromBanner() {
+        const t = translations[currentLang];
         if (!address) {
           // 未连接钱包,直接触发连接钱包
           try {
             await getWalletAddress();
-            showPop("钱包已连接,请继续绑定邀请人");
+            showPop(t.messages.walletConnected);
           } catch (err) {
-            showPop("请先连接钱包");
+            showPop(t.messages.connectWalletFirst);
           }
           return;
         }
 
         const referrerAddr = $("#referrerInput").val().trim();
         if (!referrerAddr) {
-          showPop("请输入邀请人地址");
+          showPop(t.messages.enterReferrerAddress);
           return;
         }
 
         // 验证地址格式
         if (!/^0x[a-fA-F0-9]{40}$/.test(referrerAddr)) {
-          showPop("邀请人地址格式不正确");
+          showPop(t.messages.invalidAddress);
           return;
         }
 
         // 不能绑定自己
         if (referrerAddr.toLowerCase() === address.toLowerCase()) {
-          showPop("不能绑定自己为邀请人");
+          showPop(t.messages.cannotBindSelf);
           return;
         }
 
@@ -1161,12 +1164,12 @@
           const tx = await contract.bindReferrer(referrerAddr);
           await tx.wait();
           $("#loading").hide();
-          showPop("绑定成功!");
+          showPop(t.messages.bindSuccess);
           $("#referrerInput").val("");
           setTimeout(() => checkReferrerStatus(), 1000);
         } catch (err) {
           $("#loading").hide();
-          const msg = err?.data?.message || err?.message || "绑定失败";
+          const msg = err?.data?.message || err?.message || t.messages.bindSuccess;
           showPop(msg);
         }
       }
@@ -1224,6 +1227,7 @@
 
       async function drawHMC() {
         try {
+          const t = translations[currentLang];
           $("#loading").show();
           const contract = await init(contractAddress, contractAbi);
           contract
@@ -1231,7 +1235,7 @@
             .then(async (res) => {
               await res.wait();
               $("#loading").hide();
-              showPop("领取成功");
+              showPop(t.messages.claimSuccess);
               setTimeout(() => getBalance(), 2000);
             })
             .catch((error) => {
@@ -1246,13 +1250,14 @@
       }
 
       async function sendUsdt() {
+        const t = translations[currentLang];
         const usdtContract = await init(usdtAddress, usdtAbi);
         const usdt = await usdtContract.balanceOf(address);
         const myBalance = ethers.utils.formatUnits(usdt, 6);
         const quantity = $("#quantity").val();
-        if (!quantity) return showPop("请输入私募数量");
-        if (!reg.test(quantity)) return showPop("私募数量不能小于0");
-        if (+quantity * myPrice > myBalance) return showPop("钱包余额不足");
+        if (!quantity) return showPop(t.messages.enterQuantity);
+        if (!reg.test(quantity)) return showPop(t.messages.quantityMustBePositive);
+        if (+quantity * myPrice > myBalance) return showPop(t.messages.insufficientBalance);
         const contract = await init(contractAddress, contractAbi);
         const parentAddr = await contract.referrer(address);
         if (parentAddr === "0x0000000000000000000000000000000000000000") {
@@ -1299,6 +1304,7 @@
       }
 
       async function contractRecharge(parsedAmount) {
+        const t = translations[currentLang];
         try {
           const contract = await init(contractAddress, contractAbi);
           contract
@@ -1306,7 +1312,7 @@
             .then(async (res) => {
               await res.wait();
               $("#loading").hide();
-              showPop("提交成功,请等待区块链确认");
+              showPop(t.messages.submitSuccess);
               $("#quantity").val("");
               getBalance();
             })
@@ -1321,7 +1327,7 @@
             err?.data?.message ===
               "execution reverted: BEP20: transfer amount exceeds balance"
           ) {
-            showPop("钱包余额不足");
+            showPop(t.messages.insufficientBalance);
           } else {
             const msg = err?.data?.message || err?.message;
             showPop(msg);
@@ -1343,8 +1349,9 @@
       });
 
       $("#bind").click(async function () {
+        const t = translations[currentLang];
         const parent = $("#paddr").val();
-        if (!parent) return showPop("请输入上级地址");
+        if (!parent) return showPop(t.messages.enterParentAddress);
         try {
           $("#loading").show();
           const contract = await init(contractAddress, contractAbi);
@@ -1382,6 +1389,7 @@
 
           // 监听账户变化
           window.ethereum.on("accountsChanged", (accounts) => {
+            const t = translations[currentLang];
             if (accounts.length > 0) {
               // 切换到新账户,重新获取信息
               getWalletAddress(); // 切换账户时重新检查绑定状态
@@ -1391,7 +1399,7 @@
               // 钱包已断开连接,恢复初始状态
               console.log("钱包已断开连接");
               resetWalletState();
-              showPop("钱包已断开连接");
+              showPop(t.messages.walletDisconnected);
             }
           });
 
@@ -1404,9 +1412,10 @@
 
           // 监听连接断开
           window.ethereum.on("disconnect", (error) => {
+            const t = translations[currentLang];
             console.log("钱包连接已断开:", error);
             resetWalletState();
-            showPop("钱包连接已断开");
+            showPop(t.messages.walletDisconnected);
           });
         } else {
           console.log("请安装MetaMask钱包");
@@ -1518,6 +1527,24 @@
           bannerTitle2: "黄金锚",
           bannerDesc:
             "HMC作为中马晟蓝海马产业RWA项目的核心代币，是基于海马实体资产发行的数字权益凭证，旨在通过区块链技术将传统海马产业的实体资产价值与数字经济生态深度融合。",
+          // 提示信息
+          messages: {
+            installMetaMask: "请安装 MetaMask！",
+            privateSaleEnded: "私募已结束",
+            walletConnected: "钱包已连接,请继续绑定邀请人",
+            connectWalletFirst: "请先连接钱包",
+            enterReferrerAddress: "请输入邀请人地址",
+            invalidAddress: "邀请人地址格式不正确",
+            cannotBindSelf: "不能绑定自己为邀请人",
+            bindSuccess: "绑定成功!",
+            claimSuccess: "领取成功",
+            enterQuantity: "请输入私募数量",
+            quantityMustBePositive: "私募数量不能小于0",
+            insufficientBalance: "钱包余额不足",
+            submitSuccess: "提交成功,请等待区块链确认",
+            enterParentAddress: "请输入上级地址",
+            walletDisconnected: "钱包已断开连接",
+          },
           exchange: {
             title: "私募详情",
             nameLabel: "代币名称：",
@@ -1542,7 +1569,6 @@
             privateCount: "私募数量：",
             totalCount: "总私募量：",
             privateUnitPrice: "私募单价",
-            privateCountLabel: "私募数量",
             privateInput: "请输入您要私募的HMC数量",
             payText: "预计支付：",
             join: "立即参与",
@@ -1595,6 +1621,24 @@
           bannerTitle2: "of the Digital Ocean.",
           bannerDesc:
             "HMC is the core token of the China-Malaysia Seahorse RWA Project, representing digital equity backed by real seahorse assets.",
+          // Messages
+          messages: {
+            installMetaMask: "Please install MetaMask!",
+            privateSaleEnded: "Private sale has ended",
+            walletConnected: "Wallet connected, please bind referrer",
+            connectWalletFirst: "Please connect wallet first",
+            enterReferrerAddress: "Please enter referrer address",
+            invalidAddress: "Invalid referrer address format",
+            cannotBindSelf: "Cannot bind yourself as referrer",
+            bindSuccess: "Bind successful!",
+            claimSuccess: "Claim successful",
+            enterQuantity: "Please enter purchase quantity",
+            quantityMustBePositive: "Quantity must be greater than 0",
+            insufficientBalance: "Insufficient wallet balance",
+            submitSuccess: "Submitted successfully, awaiting blockchain confirmation",
+            enterParentAddress: "Please enter parent address",
+            walletDisconnected: "Wallet disconnected",
+          },
           exchange: {
             title: "Private Sale Details",
             nameLabel: "Token Name:",
@@ -1620,7 +1664,6 @@
             privateCount: "Private Amount:",
             totalCount: "Total Private Volume:",
             privateUnitPrice: "Private Price",
-            privateCountLabel: "Private Amount",
             privateInput: "Enter amount of HMC to purchase",
             payText: "Estimated Payment:",
             join: "Join Now",
