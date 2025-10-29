@@ -1030,13 +1030,15 @@
         // 清空地址
         address = null;
 
+        const t = translations[currentLang];
+
         // 恢复按钮状态
-        $(".connect-wallet-btn").show().text("Connect Wallet");
+        $(".connect-wallet-btn").show().text(t.connectWallet);
         $(".disconnect-wallet-btn").hide();
 
         // 清空绑定状态
         $("#referrerInput").prop("disabled", false).val("");
-        $("#bindButton").prop("disabled", false).text("绑定");
+        $("#bindButton").prop("disabled", false).text(t.bind);
         $("#bindStatus").fadeOut(400);
 
         // 清空其他显示内容
@@ -1101,12 +1103,13 @@
         try {
           const contract = await init(contractAddress, contractAbi);
           const parentAddr = await contract.referrer(address);
+          const t = translations[currentLang];
           if (parentAddr !== "0x0000000000000000000000000000000000000000") {
             // 已绑定
             $("#referrerInput")
               .prop("disabled", true)
               .val(`${parentAddr.slice(0, 6)}...${parentAddr.slice(-4)}`);
-            $("#bindButton").prop("disabled", true).text("已绑定");
+            $("#bindButton").prop("disabled", true).text(t.bound);
             $("#boundReferrer").text(
               `${parentAddr.slice(0, 6)}...${parentAddr.slice(-4)}`
             );
@@ -1114,7 +1117,7 @@
           } else {
             // 未绑定
             $("#referrerInput").prop("disabled", false).val("");
-            $("#bindButton").prop("disabled", false).text("绑定");
+            $("#bindButton").prop("disabled", false).text(t.bind);
             // $("#bindStatus").fadeOut(400);
           }
         } catch (err) {
@@ -1692,7 +1695,11 @@
         if (refInput) refInput.placeholder = t.placeholder;
 
         const bindBtn = document.getElementById("bindButton");
-        if (bindBtn) bindBtn.innerText = t.bind;
+        if (bindBtn) {
+          // 根据按钮是否禁用来决定显示"绑定"还是"已绑定"
+          const isDisabled = bindBtn.disabled;
+          bindBtn.innerText = isDisabled ? t.bound : t.bind;
+        }
 
         // Banner
         const bannerH1s = document.querySelectorAll(".banner-text h1");
