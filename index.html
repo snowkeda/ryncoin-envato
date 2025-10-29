@@ -1275,7 +1275,7 @@
         const t = translations[currentLang];
         const usdtContract = await init(usdtAddress, usdtAbi);
         const usdt = await usdtContract.balanceOf(address);
-        const myBalance = ethers.utils.formatUnits(usdt, 6);
+        const myBalance = ethers.utils.formatUnits(usdt, 18);
         const quantity = $("#quantity").val();
         if (!quantity) return showPop(t.messages.enterQuantity);
         if (!reg.test(quantity)) return showPop(t.messages.quantityMustBePositive);
