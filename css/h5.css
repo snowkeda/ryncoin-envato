@@ -1,5 +1,12 @@
 @media (max-width: 991.98px) {
-
+	.px-4{
+		padding-right: 1rem !important;
+    padding-left: 1rem !important;
+	}
+	.h5-px-0 {
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+	}
 	.no-h5{
 		display: none !important;
 	}
@@ -55,6 +62,16 @@
 	}
 	.language{
 		display: block !important;
+	}
+	.exchange-content{
+		background-color: #000810;
+		background-image: none;
+	}
+	.about-label{
+		white-space: inherit !important;
+	}
+	.connect-wallet-btn {
+		padding: 10px 14px !important;
 	}
 }
 

@@ -152,7 +152,7 @@
                     id="referrerForm"
                   >
                     <div class="row">
-                      <div class="col-8 d-flex align-items-center">
+                      <div class="col-8 d-flex align-items-center h5-px-0">
                         <input
                           type="text"
                           id="referrerInput"
@@ -161,7 +161,7 @@
                           style="outline: none; box-shadow: none"
                         />
                       </div>
-                      <div class="col-4">
+                      <div class="col-4 h5-px-0">
                         <button
                           class="btn border border-black text-white w-100"
                           id="bindButton"
@@ -197,38 +197,38 @@
             <div class="group-box scroll-animate" style="transform: translateY(50px);">
               <div class="group-text">
                 <img src="imgs/Group 2085664819.png" />
-                <label class="text-blue fs-16">代币名称：</label>
+                <label class="text-blue fs-16 about-label">代币名称：</label>
                 <span class="text-white fs-16">HMC（HMC代币）</span>
               </div>
               <div class="group-text">
                 <img src="imgs/Group 2085664820.png" />
-                <label class="text-blue fs-16">发行总量：</label>
+                <label class="text-blue fs-16 about-label">发行总量：</label>
                 <span class="text-white fs-16">30亿枚 HMC</span>
               </div>
               <div class="group-text">
                 <img src="imgs/Group 2085664821.png" />
-                <label class="text-blue fs-16">私募比例：</label>
+                <label class="text-blue fs-16 about-label">私募比例：</label>
                 <span class="text-white fs-16"
                   >总发行量的10%（即3亿枚 HMC）</span
                 >
               </div>
               <div class="group-text">
                 <img src="imgs/Group 2085664818.png" />
-                <label class="text-blue fs-16">发行价格：</label>
+                <label class="text-blue fs-16 about-label">发行价格：</label>
                 <span class="text-white fs-16"
                   >3 U/枚（以USDT或其他等值稳定币计价）</span
                 >
               </div>
               <div class="group-text">
                 <img src="imgs/Group 2085664817.png" />
-                <label class="text-blue fs-16">私募机制：</label>
+                <label class="text-blue fs-16 about-label">私募机制：</label>
                 <span class="text-white fs-16"
                   >本次私募通过分配HMB代币（私募临时代币）进行，投资者在私募期间获得HMB代币，私募结束后根据HMB代币数量锁仓并释放HMC代币。</span
                 >
               </div>
               <div class="group-text">
                 <img src="imgs/Group 2085664816.png" />
-                <label class="text-blue fs-16">锁仓机制：</label>
+                <label class="text-blue fs-16 about-label">锁仓机制：</label>
                 <span class="text-white fs-16"
                   >私募完成后，系统将根据投资者持有的HMB代币数量，按1:1比例锁仓对应数量的HMC代币（即1枚
                   HMB = 1枚 HMC）。</span
@@ -236,14 +236,14 @@
               </div>
               <div class="group-text">
                 <img src="imgs/Group 2085664815.png" />
-                <label class="text-blue fs-16">释放周期：</label>
+                <label class="text-blue fs-16 about-label">释放周期：</label>
                 <span class="text-white fs-16"
                   >锁仓的HMC代币将在550天内线性释放。释放从私募结束后的第1天开始，每日释放一定比例，直至550天结束。</span
                 >
               </div>
               <div class="group-text">
                 <img src="imgs/Group 2085664814.png" />
-                <label class="text-blue fs-16">释放查询：</label>
+                <label class="text-blue fs-16 about-label">释放查询：</label>
                 <span class="text-white fs-16"
                   >投资者可通过官网钱包或指定平台查看释放进度和余额。</span
                 >
@@ -339,17 +339,17 @@
                   <div class="col">
                     <div
                       class="input-group equity"
-                      style="display: flex; justify-content: space-between;"
+                      style="display: flex; justify-content: space-between; flex-wrap: nowrap;"
                     >
-                      <span class="text-blue quantity-label">私募数量</span>
-                      <div style="display: flex; align-items: center; gap: 5px; flex: 1;">
+                      <span class="text-blue quantity-label" style="white-space: nowrap;">私募数量</span>
+                      <div style="display: flex; align-items: center; gap: 5px; min-width: 0; flex-shrink: 1; ">
                         <input
                           type="number"
                           class="border-0 shadow-none lh-1 pe-0 equity text-white"
                           aria-label="ltc"
                           id="quantity"
                           placeholder="您要私募的HMC数量"
-                          style="margin-top: -1px;"
+                          style="margin-top: -1px; "
                           />
                         <span class="text-white-50" style="font-size: 14px;">HMC</span>
                       </div>
@@ -1795,7 +1795,7 @@
         const labels = document.querySelectorAll("#Exchange .group-text label");
         // 动态控制 Exchange label 宽度
         labels.forEach((label) => {
-          label.style.minWidth = isZh ? "80px" : "180px";
+          label.style.minWidth = isZh ? "80px" : "110px";
           label.style.display = "inline-block";
         });
         const spans = document.querySelectorAll("#Exchange .group-text span");
