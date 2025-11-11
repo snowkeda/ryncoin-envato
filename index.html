@@ -947,6 +947,7 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/ethers.js"></script>
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bignumber.min.js"></script>
     <script>
       var address, contractAbi, usdtAbi;
       // const contractAddress = "0xf1D75949710D6223F8BA1425F9D84D024eC05C1c";
@@ -1047,8 +1048,8 @@
         $("#bindStatus").fadeOut(400);
 
         // 清空其他显示内容
-        $("#equity-num").text("私募数量: 0.00 HMC");
-        $("#equity-total").text("总私募量: 300000000 HMC");
+        $("#equity-num").text(t.exchange.privateCount + " 0.00 HMC");
+        $("#equity-total").text(t.exchange.totalCount + " 300000000 HMC");
         $("#await-draw").text("");
         $("#progress-bar").css({ width: "0%" });
         $("#price").text("0.00");
@@ -1196,6 +1197,7 @@
       }
 
       async function getBalance() {
+          const t = translations[currentLang];
           const contract = await init(contractAddress, contractAbi);
           const hmbContract = await init(hmbAddress, usdtAbi);
           const balance = await hmbContract.balanceOf(contractAddress);
@@ -1210,9 +1212,9 @@
               18
             );
             const proWidth = +drawNum / lockedNum;
-            $("#equity-num").text(`领取HMC数量：${drawNum} HMC`);
-            $("#equity-total").text(`锁仓数量：${lockedNum} HMC`);
-            $("#await-draw").text(`待领取数量：${claimableHMC} HMC`);
+            $("#equity-num").text(t.messages.claimableAmount + `${drawNum} HMC`);
+            $("#equity-total").text(t.messages.lockAmount + `${lockedNum} HMC`);
+            $("#await-draw").text(t.messages.awaitDraw + `${claimableHMC} HMC`);
             $("#progress-bar").css({ width: `${proWidth * 100}%` });
             $("#exchange")
               .text("GET HMC")
@@ -1220,10 +1222,14 @@
                 "background-color": +claimableHMC > 0 ? "#0d6efd" : "#222",
               });
           } else {
-            const equity = 300000000 - bnum;
-            const proWidth = equity / 300000000;
-            $("#equity-num").text(`私募数量：${equity} HMC`);
-            $("#equity-total").text(`总私募量：300000000 HMC`);
+            // 使用 BigNumber 进行精确计算
+            const totalSupply = new BigNumber("300000000");
+            const bnumBig = new BigNumber(bnum);
+            const equity = totalSupply.minus(bnumBig);
+            const proWidth = equity.dividedBy(totalSupply).toNumber();
+
+            $("#equity-num").text(t.exchange.privateCount + `${equity.toFixed(0)} HMC`);
+            $("#equity-total").text(t.exchange.totalCount + " 300000000 HMC");
             $("#progress-bar").css({ width: `${proWidth * 100}%` });
         }
       }
@@ -1577,6 +1583,9 @@
             submitSuccess: "提交成功,请等待区块链确认",
             enterParentAddress: "请输入上级地址",
             walletDisconnected: "钱包已断开连接",
+            claimableAmount: "领取HMC数量：",
+            lockAmount: "锁仓数量：",
+            awaitDraw: "待领取数量：",
           },
           exchange: {
             title: "私募详情",
@@ -1672,6 +1681,9 @@
             submitSuccess: "Submitted successfully, awaiting blockchain confirmation",
             enterParentAddress: "Please enter parent address",
             walletDisconnected: "Wallet disconnected",
+            claimableAmount: "Claimable HMC Amount: ",
+            lockAmount: "Locked Amount: ",
+            awaitDraw: "Pending Claim: ",
           },
           exchange: {
             title: "Private Sale Details",
